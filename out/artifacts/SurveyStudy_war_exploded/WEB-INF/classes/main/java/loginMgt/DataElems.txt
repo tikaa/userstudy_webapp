@@ -1,0 +1,10 @@
+Address
+Name
+Age
+Mobile Number
+Email Address
+Medicine Taken
+Blood Type
+Occupation
+Weight
+Height
