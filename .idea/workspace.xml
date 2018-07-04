@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SurveyStudy:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="becbf3ec-4f67-4255-8afb-2591c8a7e987" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/loginMgt/SaveInformation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/introduction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/privacyRiskView.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/css/font-awesome-animation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontd41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regulard41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/img/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/img/sativa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/js/custom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/plugins/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/style/plugins/jquery-1.10.2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElemsReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElemsReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataElement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/datasources/passwords.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/datasources/passwords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login_finished.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login_finished.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register_finish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register_finish.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/skel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElemsReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElemsReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/model/DataElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login_finished.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login_finished.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/register_finish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/register_finish.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/skel.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/util.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="SaveInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/SaveInformation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eval_process.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/eval_process.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="206" column="52" selection-start-line="206" selection-start-column="52" selection-end-line="206" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="changeDesign.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/changeDesign.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-17">
+              <caret line="74" column="62" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Participant.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/Participant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="32" lean-forward="true" selection-end-line="156" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#436#437#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+                <element signature="e#524#525#0" expanded="true" />
+                <element signature="e#572#573#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#676#677#0" expanded="true" />
+                <element signature="e#714#715#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+                <element signature="e#3060#3061#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataElement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/DataElement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="34" />
+              <folding>
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#1461#1462#0" expanded="true" />
+                <element signature="e#1509#1510#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="share.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/share.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-298">
+              <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="thankyou.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/thankyou.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/util/EmailSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_finished.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/login_finished.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="jsf" />
+        <option value="Jsp File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>package main\.java\.loginMgt\;\n\nimport main\.java\.model\.DataElement\;\n\nimport java\.io\.File\;\nimport java\.io\.IOException\;\nimport java\.util\.ArrayList\;\nimport java\.util\.List\;\nimport java\.util\.Scanner\;\n\npublic class DataElemsReader \{\n\n    String fileName \= \&quot;DataElems\.txt\&quot;\;\n    List\&lt;DataElement\&gt; dataElemList \= new ArrayList\&lt;DataElement\&gt;\(\)\;\n\n    public List\&lt;DataElement\&gt; generateDataElems\(\)\{\n\n        \/\/Get file from resources folder\n        ClassLoader classLoader \= getClass\(\)\.getClassLoader\(\)\;\n        File file \= new File\(classLoader\.getResource\(fileName\)\.getFile\(\)\)\;\n\n        try \(Scanner scanner \= new Scanner\(file\)\) \{\n\n            while \(scanner\.hasNextLine\(\)\) \{\n                String line \= scanner\.nextLine\(\)\;\n                DataElement tempElem \= new DataElement\(\)\;\n                tempElem\.setDataElemName\(line\)\;\n                dataElemList\.add\(tempElem\)\;\n            \}\n\n        \} catch \(IOException e\) \{\n            e\.printStackTrace\(\)\;\n        \}\n\n        return dataElemList\;\n\n    \}\n\n    public String\[\] allDataElemNames\(\)\{\n        String\[\] dataElemNames \= new String\[dataElemList\.size\(\)\]\;\n        \n\n\nreturn dataElemNames\;\n    \}\n\n\n\}\n</find>
+      <find>myFunction</find>
+      <find>radio</find>
+      <find>\&lt;\%\@ page import\=\&quot;main\.java\.loginMgt\.DataElemsReader\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;main\.java\.model\.DataElement\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;java\.util\.List\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;java\.util\.Arrays\&quot; \%\&gt;\&lt;\%\-\-\n  Created by IntelliJ IDEA\.\n  User\: Asus PC\n  Date\: 1\/10\/2017\n  Time\: 10\:16 AM\n  To change this template use File \| Settings \| File Templates\.\n\-\-\%\&gt;\n\&lt;\%\@ page contentType\=\&quot;text\/html\;charset\=UTF\-8\&quot; language\=\&quot;java\&quot; \%\&gt;\n\&lt;html\&gt;\n\&lt;head\&gt;\n    \&lt;title\&gt;User Study \- University of New South Wales\&lt;\/title\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\, maximum\-scale\=1\&quot;\&gt;\n    \&lt;meta name\=\&quot;description\&quot; content\=\&quot;\&quot;\&gt;\n    \&lt;meta name\=\&quot;author\&quot; content\=\&quot;\&quot;\&gt;\n    \&lt;\!\-\-\[if IE\]\&gt;\n    \&lt;meta http\-equiv\=\&quot;X\-UA\-Compatible\&quot; content\=\&quot;IE\=edge\,chrome\=1\&quot;\&gt;\n    \&lt;\!\[endif\]\-\-\&gt;\n    \&lt;title\&gt;UNIQUE  BOOTSTRAP TEMPLATE \- Peterna \&lt;\/title\&gt;\n    \&lt;\!\-\-REQUIRED STYLE SHEETS\-\-\&gt;\n    \&lt;\!\-\- BOOTSTRAP CORE STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/bootstrap\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- FONTAWESOME STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/font\-awesome\.min\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\-ANIMATED FONTAWESOME STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/font\-awesome\-animation\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- CUSTOM STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/style\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- GOOGLE FONT \-\-\&gt;\n    \&lt;link href\=\'http\:\/\/fonts\.googleapis\.com\/css\?family\=Open\+Sans\' rel\=\'stylesheet\' type\=\'text\/css\'\&gt;\n    \&lt;\!\-\- HTML5 shim and Respond\.js IE8 support of HTML5 elements and media queries \-\-\&gt;\n    \&lt;\!\-\-\[if lt IE 9\]\&gt;\n    \&lt;script src\=\&quot;https\:\/\/oss\.maxcdn\.com\/libs\/html5shiv\/3\.7\.0\/html5shiv\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;https\:\/\/oss\.maxcdn\.com\/libs\/respond\.js\/1\.3\.0\/respond\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;\!\[endif\]\-\-\&gt;\n\n\n\&lt;\/head\&gt;\n\&lt;body \&gt;\n\&lt;section  id\=\&quot;services\-sec\&quot;\&gt;\n    \&lt;div class\=\&quot;container\&quot;\&gt;\n        \&lt;div class\=\&quot;row \&quot;\&gt;\n    \&lt;\%  List\&lt;DataElement\&gt; listofSelectElems \= DataElemsReader\.getInstance\(\)\.getCurrDataElemList\(\)\;\n        for \(DataElement currDE \: listofSelectElems\) \{\n            if\(currDE\.isSelected\(\)\)\{\n            String sensitivityVal \= request\.getParameter\(currDE\.getDataElemName\(\) \+ \&quot;sensitivity\&quot;\)\.toString\(\)\;\n    \%\&gt;\n            \&lt;li\&gt;You have selected \&lt;\%\=currDE\.getDataElemName\(\)\%\&gt; with a sensitivity \&lt;\%\= sensitivityVal\%\&gt;\&lt;\/li\&gt;\n            \&lt;\%\n            if \(sensitivityVal \!\= null\) \{\n\n                currDE\.setSensitivity\(Integer\.parseInt\(sensitivityVal\)\)\;\n            \}\n\n                    \}\n        \}\n\n\n    \%\&gt;\n    \&lt;h2\&gt;\&lt;strong\&gt;Select Data Items\&lt;\/strong\&gt; \&lt;\/h2\&gt;\n    \&lt;h6\&gt;How visible do you intend to make the data you decided to collect in the application design\?\&lt;\/h6\&gt;\n\n        \&lt;\%\n            for \(int iterator \= 0\; iterator\&lt; listofSelectElems\.size\(\)\; iterator\+\+\) \{\n                DataElement currDataElem \= listofSelectElems\.get\(iterator\)\;\n        if \(currDataElem\.isSelected\(\)\)\{\%\&gt;\n        \&lt;\/br\&gt;\&lt;\/br\&gt;\n        \&lt;form id\=\&quot;form\&quot; action\=\&quot;register\.jsp\&quot; onsubmit\=\&quot;return myFunction\(\)\&quot; method\=\&quot;post\&quot;\&gt;\n            \&lt;\%String currDataElemName \= currDataElem\.getDataElemName\(\)\;\%\&gt;\n            \&lt;li\&gt;\&lt;\%\=currDataElemName \%\&gt;\&lt;\/li\&gt;\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+\&quot;5\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;5\&quot; \/\&gt; Highly Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;4\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;4\&quot; \/\&gt; Somewhat Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;3\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;3\&quot; \/\&gt; Moderately Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;2\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;2\&quot; \/\&gt; Very low Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;1\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;1\&quot; \/\&gt; Mot at all Visible\n\n\&lt;\%\n    \}\n\n                    \}\n\%\&gt;\n\n\n          \n                \&lt;div class\=\&quot;buttonHolder\&quot;\&gt;\&lt;button class\=\&quot;button\&quot; type\=\&quot;submit\&quot; form\=\&quot;form\&quot;\n                                                  value\=\&quot;Submit\&quot;\&gt;Next \&gt;\&gt;\&lt;\/button\&gt;\&lt;\/div\&gt;\n           \n\n    \&lt;\/form\&gt;\n        \&lt;\/div\&gt;\n    \&lt;\/div\&gt;\n\&lt;\/section\&gt;\n\&lt;\/body\&gt;\n\&lt;\/html\&gt;\n</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/loginMgt/DataElems.java" />
+        <option value="$PROJECT_DIR$/src/loginMgt/DataElemsReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ww.java" />
+        <option value="$PROJECT_DIR$/src/main/ww.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/DataElems.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/ParticipantIDGene.java" />
+        <option value="$PROJECT_DIR$/web/style/main.css" />
+        <option value="$PROJECT_DIR$/web/introduction.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/SaveInformation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt" />
+        <option value="$PROJECT_DIR$/web/introduction.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/DataItems.java" />
+        <option value="$PROJECT_DIR$/web/login.jsp" />
+        <option value="$PROJECT_DIR$/web/storeData.jsp" />
+        <option value="$PROJECT_DIR$/web/register.jsp" />
+        <option value="$PROJECT_DIR$/web/register_finish.jsp" />
+        <option value="$PROJECT_DIR$/web/login_finished.jsp" />
+        <option value="$PROJECT_DIR$/web/share.jsp" />
+        <option value="$PROJECT_DIR$/web/finish.jsp" />
+        <option value="$PROJECT_DIR$/web/changeDesign.jsp" />
+        <option value="$PROJECT_DIR$/web/privacyRiskView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/model/DataElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/EmailSender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/Participant.java" />
+        <option value="$PROJECT_DIR$/web/eval_process.jsp" />
+        <option value="$PROJECT_DIR$/web/thankyou.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="673" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="loginMgt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/WEB-INF/lib/json-simple-1.1.1.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Awanthika\IdeaProjects\SurveyStudy\web\style" />
+      <recent name="C:\Users\Awanthika\IdeaProjects\SurveyStudy\web\WEB-INF" />
+      <recent name="C:\Users\Awanthika\IdeaProjects\SurveyStudy\src\main\java\loginMgt" />
+      <recent name="C:\Users\Awanthika\IdeaProjects\SurveyStudy\web" />
+      <recent name="C:\Users\Awanthika\IdeaProjects\SurveyStudy\web\WEB-INF\lib" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="update-resources" />
+      <deployment>
+        <artifact name="SurveyStudy:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_SurveyStudy" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56313" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="SurveyStudy:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_SurveyStudy" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56313" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="SurveyStudy:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="becbf3ec-4f67-4255-8afb-2591c8a7e987" name="Default" comment="" />
+      <created>1526269334975</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1526269334975</updated>
+      <workItem from="1526269348242" duration="2674000" />
+      <workItem from="1526288985598" duration="814000" />
+      <workItem from="1526339306223" duration="600000" />
+      <workItem from="1526466429715" duration="9453000" />
+      <workItem from="1526545055910" duration="632000" />
+      <workItem from="1527143183209" duration="4281000" />
+      <workItem from="1527198969091" duration="16330000" />
+      <workItem from="1527464757912" duration="3087000" />
+      <workItem from="1529648198225" duration="7467000" />
+      <workItem from="1529878061874" duration="595000" />
+      <workItem from="1530576287408" duration="24109000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="70042000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.3290938" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3926868" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.3290938" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4244833" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.238653" />
+      <window_info id="Web" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/share.jsp</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/web/share.jsp</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>request.getParameter(currDataElement.getDataElemName() + &quot;how&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameterValues(&quot;check&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getAttribute(&quot;numOfSelectVals&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getAttribute(&quot;numOfSelectVals&quot;).toString()</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;numOfSelectVals&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameterValues(&quot;notit&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>request.getParameter(&quot;selectvals&quot;)</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>el</expression-string>
+        <language-id>JSP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/style/font-awesome.min.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/crypt/CryptManager.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.java" />
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="86" selection-start-line="8" selection-start-column="6" selection-end-line="12" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="65" selection-start-line="2" selection-start-column="65" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login_finished.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="2" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style/font-awesome.min.css" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/crypt/CryptManager.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="65" lean-forward="true" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="86" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="12" selection-end-column="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login_finished.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style/font-awesome.min.css" />
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="100" selection-start-line="27" selection-start-column="100" selection-end-line="27" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/ww.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/crypt/CryptManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/DataElems.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style/main.js" />
+    <entry file="file://$PROJECT_DIR$/web/style/jquery.min.js" />
+    <entry file="file://$PROJECT_DIR$/web/style/font-awesome.min.css" />
+    <entry file="file://$PROJECT_DIR$/web/style/main.css" />
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/web/style/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/ParticipantIDGene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/introduction.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/DataItems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" lean-forward="true" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="46" column="96" selection-start-line="46" selection-start-column="53" selection-end-line="46" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/storeData.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="97" column="67" selection-start-line="97" selection-start-column="62" selection-end-line="97" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/finish.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="107" lean-forward="true" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="78" column="8" lean-forward="true" selection-start-line="45" selection-end-line="78" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/register_finish.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="54" column="66" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/privacyRiskView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="97" column="46" selection-start-line="97" selection-start-column="46" selection-end-line="97" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login_finished.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/DataElement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="34" />
+          <folding>
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+            <element signature="e#1509#1510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/share.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-298">
+          <caret line="61" column="50" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/EmailSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/Participant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="32" lean-forward="true" selection-end-line="156" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+            <element signature="e#3060#3061#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/eval_process.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="206" column="52" selection-start-line="206" selection-start-column="52" selection-end-line="206" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/SaveInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/changeDesign.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="74" column="62" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/thankyou.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>SurveyStudy:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SurveyStudy</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,89 +1,81 @@
 <%@ page import="main.java.model.DataElement" %>
 <%@ page import="javax.xml.crypto.Data" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
+<%@ page import="main.java.loginMgt.DataElemsReader" %>
+<%@ page import="main.java.model.DataItems" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="../pages/css/js/ie/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" href="style/main.css" type="text/css"/>
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <title>Research Survey - University of New South Wales, Australia </title>
+    <!--REQUIRED STYLE SHEETS-->
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="style/css/bootstrap.css" rel="stylesheet"/>
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="style/css/font-awesome.min.css" rel="stylesheet"/>
+    <!--ANIMATED FONTAWESOME STYLE CSS -->
+    <link href="style/css/font-awesome-animation.css" rel="stylesheet"/>
+    <!-- CUSTOM STYLE CSS -->
+    <link href="style/css/style.css" rel="stylesheet"/>
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-    <title>Select Data Items</title>
-    <script>
 
-        function myFunction() {
 
-            var name = document.getElementById("name").value;
-            var age = document.getElementById("age").value;
-            var occupation = document.getElementById("occupation").value;
-            var email = document.getElementById("email").value;
-            var medicine = document.getElementById("medicine").value;
-            var address = document.getElementById("address").value;
-            var weight = document.getElementById("weight").value;
-            var height = document.getElementById("height").value;
-            var blood = document.getElementById("blood").value;
-            var mobile = document.getElementById("mobile").value;
 
-            return true;
-        }
-    </script>
-</head>
+        </head>
 <body>
+<%!
+    boolean myFunction() {
+        return true;
+    }
+%>
 
-<form id="form" action="login_finished.jsp" onsubmit="return myFunction()" method="post">
-    <p>Question 01 : Please Select the Data elements from an end user you would consider selecting for the application scenario : </p>
-
-    <ul role="listbox" tabindex="0" aria-label="email list">
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="name" class="o-checkbox" type="checkbox"><label for="name"></label>
-            Name
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="address" class="o-checkbox" type="checkbox"><label for="address"></label>
-            Address
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="mobile_number" class="o-checkbox" type="checkbox"><label for="mobile_number"></label>
-            Mobile Number
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="email" class="o-checkbox" type="checkbox"><label for="email"></label>
-            Email Address
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="occupation" class="o-checkbox" type="checkbox"><label for="occupation"></label>
-            Occupation
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="medicine" class="o-checkbox" type="checkbox"><label for="medicine"></label>
-            Medicine Taken
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="blood" class="o-checkbox" type="checkbox"><label for="blood"></label>
-            Blood Type
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="weight" class="o-checkbox" type="checkbox"><label for="weight"></label>
-            Weight
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="height" class="o-checkbox" type="checkbox"><label for="height"></label>
-            Height
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-            <input tabindex="-1" id="age" class="o-checkbox" type="checkbox"><label for="age"></label>
-            Age
-        </li>
-    </ul>
-
-    <li>
-        <div class="buttonHolder"><button class="button" type="submit" form="form"
-                                                              value="Submit">Next >></button></div>
-    </li>
+<div id="home-sec">
 
 
-</form>
+    <div class="container" id="home">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h2 class="head-sub-main">User Survey on Privacy Concerned Software Development</h2>
+                <h3 class="head-last"> <p>Action :</p>
+                    Select the Data elements from an end user you would consider collecting (to store in the app, or to share with third parties) for the
+                    application scenario : </h3>
+                <table>
+                    <tr>
+                        <th>Data Element</th>
+                        <th>   </th>
+                    </tr>
+
+                <FORM ACTION="storeData.jsp" METHOD="post">
+                    <%for (DataItems dataElem : DataItems.values()) {
+                        String dataName = dataElem.toString();
+                    %>
+                   <tr><td> <INPUT TYPE="CHECKBOX" NAME="check" VALUE=<%=dataName %> ></td>
+                       <td><%=dataName %></td></tr>
+                    <BR>
+                    <%}%> </table>
+                    <INPUT TYPE="SUBMIT" class="btn btn-danger btn-lg head-btn-one" VALUE="Submit">
+                </FORM>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <br><br>
 
 </body>

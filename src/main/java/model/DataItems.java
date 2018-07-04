@@ -4,11 +4,11 @@ public enum DataItems {
     NAME,
     AGE,
     ADDRESS,
-    MOBILE,
     EMAIL,
-    MEDICINE,
-    BLOODTYPE,
+    LOCATION,
     OCCUPATION,
-    HEIGHT,
-    WEIGHT
+    ETHNICITY,
+    RELIGION,
+    MARITAL,
+    CREDIT
 }

@@ -8,3 +8,9 @@ Blood Type
 Occupation
 Weight
 Height
+Credit Card Number
+Location
+Birthday
+Nationality
+Religion
+
