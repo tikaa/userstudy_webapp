@@ -4,10 +4,10 @@ public class DataElement {
 
     private String dataElemName;
     private String reasonForSelection;
-    private int sensitivity;
-    private int visibility;
-    private int relatedness;
-    private float privacyRisk;
+    private double sensitivity;
+    private double visibility;
+    private double relatedness;
+    private double privacyRisk;
     private boolean isPreSelected;
     private boolean isPreStored;
     private boolean isPreShared;
@@ -19,18 +19,6 @@ public class DataElement {
     private String wherePreStored;
     private String howPostStored;
     private String wherePostStored;
-
-    public String getHowShared() {
-        return howShared;
-    }
-
-    public void setHowShared(String howShared) {
-        this.howShared = howShared;
-    }
-
-    private String howShared;
-
-
 
     public String getHowPreStored() {
         return howPreStored;
@@ -148,38 +136,38 @@ public class DataElement {
         this.dataElemName = dataElemName;
     }
 
-    public int getSensitivity() {
+    public double getSensitivity() {
         return sensitivity;
     }
 
-    public void setSensitivity(int sensitivity) {
+    public void setSensitivity(double sensitivity) {
         this.sensitivity = sensitivity;
     }
 
-    public int getVisibility() {
+    public double getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(int visibility) {
+    public void setVisibility(double visibility) {
         this.visibility = visibility;
     }
 
-    public int getRelatedness() {
+    public double getRelatedness() {
         return relatedness;
     }
 
-    public void setRelatedness(int relatedness) {
+    public void setRelatedness(double relatedness) {
         this.relatedness = relatedness;
     }
 
 
-    public float getPrivacyRisk() {
+    public double getPrivacyRisk() {
         if (this.getRelatedness() != 0) {
 
-            float risk = this.getSensitivity() * this.getVisibility() / (2 * this.getRelatedness());
+            double risk =  (this.getSensitivity() *  this.getVisibility()) / ( 2.0 * this.getRelatedness());
             this.setPrivacyRisk(risk);
             //check float value saving
-            System.out.println("calculated privacy risk (floar) : " + risk);
+            System.out.println("calculated privacy risk (float) : " + risk);
 
         } else {
             this.setPrivacyRisk(0);
@@ -187,7 +175,7 @@ public class DataElement {
         return privacyRisk;
     }
 
-    public void setPrivacyRisk(float privacyRisk) {
+    public void setPrivacyRisk(double privacyRisk) {
         this.privacyRisk = privacyRisk;
     }
 

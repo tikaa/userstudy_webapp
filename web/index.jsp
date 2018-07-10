@@ -35,72 +35,64 @@
         String participantID = ParticipantIDGene.getInstance().idGenerator();
         request.setAttribute("id", participantID);
 
-        Participant currParticipant = Participant.getInstance();
+       Participant currParticipant = Participant.getInstance();
         currParticipant.setParticipantID(participantID);
-        //response.sendRedirect("login.jsp");
+        //response.sendRedirect("data_selection_page.jsp");
         request.setAttribute("currParticipant", currParticipant);
     %>;
 
 
-
 </head>
 <body>
+<div id="home-sec">
+    <div class="container" id="home">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <img src="style/img/unsw_small_logo.png" width="350" height="200">
+                <img src="style/img/data61_logo.jpg" width="350" height="200">
+                <h2 class="head-sub-main">Survey on Privacy Concerned Software Development</h2>
+                <h3 class="head-last"><p>This survey is run by the University of New South Wales, Australia and Data61,
+                    CSIRO (Commonwealth Scientific and Industrial Research Organisation), Australia.</p>
+
+                    <p >This user study explores how you, as a developer, make your decisions to collect and store user
+                        data when you design
+                        software applications as a software developer.
+
+                        You will be asked to perform simple tasks on selecting data items for a given application
+                        scenario.
+
+                        The study is expected to take approximately 30 minutes to complete. We do not collect you name
+                        or any other personally
+                        identifiable information from you.
+
+                        We will collect some background information such as your age and experience to help us better
+                        analyze
+                        your data, however, these will be anonymized and hence cannot be traced back to you.</p>
+
+                    </br></br>
+
+                    <p>If you have any concerns about the content or conduct of this study please contact
+
+                        Dr. Nalin Asanka G.A via nalin.asanka@adfa.edu.au. Or
+                        Dr. Marthie Grobler via marthie.grobler@data61.csiro.au
+
+                        If you are willing to participate please proceed by clicking the get started button below. By
+                        proceeding into
+                        the survey you give us consent to store and use the data you submit at the end of the survey.
+                        You can stop and exit the survey at any point by closing the web page, in which case we will not
+                        collect or store any data from you.</p>
+
+                    </br><br></h3>
 
 
+                <p>Please note your participant ID :<%= request.getAttribute("id") %>
+                </p>
 
-
-
-    <div id="home-sec">
-
-
-        <div class="container" id="home">
-            <div class="row text-center">
-                <div class="col-md-12">
-
-                    <h2 class="head-sub-main">User Survey on Privacy Concerned Software Development</h2>
-                    <h3 class="head-last"> <p>This survey is run by the University of New South Wales, Canberra, Australia</p>
-
-                        <p>This user study explores how you make your decisions to collect and store user data when you design
-                            software applications as a software developer.
-
-                            You will be asked to perform simple tasks on selecting data items for a given application scenario.
-
-                            The study is expected to take approximately 2 hours. We do not collect you name or any other personally
-                            identifiable information from you.
-
-                            We will collect some background information such as your age and experience to help us better analyze
-                            your data, however, these will be anonymized
-
-                            and hence cannot be traced back to you.</p>
-
-                        <p>I am a PhD student at the University of New South Wales, Canberra working in collaboration with Data61, CSIRO
-                            Australia.
-
-                            This survey is a part of my PhD research.
-
-                        </p></br></br>
-
-                        <p>If you have any concerns about the content or conduct of this study please contact
-
-                            Dr. Nalin Asanka G.A via nalin.asanka@adfa.edu.au.
-
-                            If you are willing to participate please record the participant ID below and proceed. By proceeding into
-                            the survey you give us consent to store and use
-
-                            the data you submit at the end of the survey. You can survey at any point, in which case we will not
-                            collect or store any data from you.</p>
-
-                        </br><br></h3>
-
-
-                    <p>Please note your participant ID :<%= request.getAttribute("id") %>
-                    </p>
-
-                    <a href="introduction.jsp" class="btn btn-danger btn-lg head-btn-one" type="submit">Get started</a>
-                </div>
+                <a href="introduction_page.jsp" class="btn btn-danger btn-lg head-btn-one" type="submit">Get started</a>
             </div>
         </div>
     </div>
+</div>
 
 
 </body>
