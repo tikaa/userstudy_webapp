@@ -1,98 +1,86 @@
-<%@ page import="main.java.model.DataElement" %>
-<%@ page import="java.util.List" %>
-<%@ page import="main.java.loginMgt.Participant" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
 <head>
     <title>User Study - University of New South Wales</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <![endif]-->
-    <title>Research Survey - University of New South Wales, Australia </title>
-    <!--REQUIRED STYLE SHEETS-->
-    <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="style/css/bootstrap.css" rel="stylesheet"/>
-    <!-- FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome.min.css" rel="stylesheet"/>
-    <!--ANIMATED FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome-animation.css" rel="stylesheet"/>
-    <!-- CUSTOM STYLE CSS -->
-    <link href="style/css/style.css" rel="stylesheet"/>
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/css/main.css" rel="stylesheet">
 
-
+    <script>
+        function validateForm() {
+            var checked= [];
+            var i = 0;
+            <%String[] list = session.getAttribute("selectedData").toString().split(",");
+                for (String s : list) {%>
+            var currId = "<%=s%>";
+            checked[i] = false;
+            var elements = document.getElementsByName(currId);
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            <%}%>
+            for (var val in checked) {
+                if (checked[val] != true) {
+                    alert('Please set relatedness value for all data elements');
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+    </script>
 </head>
 <body>
-<div id="home-sec">
-    <div class="container" id="home">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="head-sub-main">Survey on Privacy Concerned Software Development</h2>
-            </div>
-        </div>
+<section class="wrapper style2 special" id="two">
+    <div class="inner narrow">
+        <header>
+            <h2 class="head-last">
+                How related do you do you think the data items are to the purpose of this application?
+            </h2></header>
     </div>
-</div>
-<section id="services-sec">
     <div class="container">
         <div class="row ">
 
-            <% List<DataElement> listofSelectElems = Participant.getInstance().getDataElemList();
-                for (DataElement currDE : listofSelectElems) {
-                    if (currDE.isPreSelected()) {
-                        String sensitivityVal = String.valueOf(currDE.getSensitivity());
-                        String visibilityVal = request.getParameter(currDE.getDataElemName());
-            %>
-            <li>You have preSelected <%=currDE.getDataElemName()%> with a sensitivity <%= sensitivityVal%> and a visibility <%= visibilityVal%>
-            </li>
-            <%
-                        if (visibilityVal != null) {
-
-                            currDE.setVisibility(Double.parseDouble(visibilityVal));
-                        }
-
+            <% String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
+                for (String currDE : selectedDatalist) {
+                    String visibilityVal = request.getParameter(currDE);
+                    if (visibilityVal != null) {
+                        session.setAttribute(currDE + "visibility", visibilityVal);
                     }
                 }
-
-
             %>
-            <h1 class="head-last">How related do you do you think the data items are to the purpose of this application?</h1>
-
+            <p>The data you use may be highly related for the application such that the application cannot function without that data. For example,
+            the credit card number for a payment portal. Less related data are data used to enhance the system functionality or data that is used with the hope of giving more functioanlity
+            in the future.</p>
+            <form id="form" action="privace_risk_view_page.jsp" onsubmit="return validateForm()" method="post">
             <%
-                for (int iterator = 0; iterator < listofSelectElems.size(); iterator++) {
-                    DataElement currDataElem = listofSelectElems.get(iterator);
-                    if (currDataElem.isPreSelected()) {%>
-            </br></br>
-            <form id="form" action="privace_risk_view_page.jsp" onsubmit="return myFunction()" method="post">
-                <%String currDataElemName = currDataElem.getDataElemName();%>
-                <li><%=currDataElemName %>
-                </li><br><br>
+                for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
+                    String currDataElemName = selectedDatalist[iterator];
+            %>
+
+                <table id="customers">
+                    <tr><th>
+                <%=currDataElemName %>
+                    </th></tr>
+                <tr><td>
                 <input type="radio" name=<%= currDataElemName%>
                         value="3"/> Highly Related
                 <input type="radio" name=<%= currDataElemName%>
                         value="2"/> Somewhat Related
                 <input type="radio" name=<%= currDataElemName%>
-                        value="1"/> Not at all Related
-
+                        value="1"/> Not at all Related </td></tr>
                 <%
-                        }
-
                     }
                 %>
-
-<br><br>
+                </table>
                 <div class="buttonHolder">
-                    <button class="btn btn-danger btn-lg head-btn-one" type="submit" form="form"
+                    <button class="button" style="vertical-align:middle" type="submit" form="form"
                             value="Submit">Next >>
                     </button>
                 </div>
@@ -101,6 +89,6 @@
         </div>
     </div>
     </div>
-</div>
+</section>
 </body>
 </html>

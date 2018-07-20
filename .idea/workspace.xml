@@ -7,78 +7,79 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="becbf3ec-4f67-4255-8afb-2591c8a7e987" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/web/eval_process_page.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyStudy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyStudy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/crypt/CryptManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElemsReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/SaveInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/UserManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/exception/AuthenticationFailure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/exception/UserExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/model/DataItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/Converter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/DataElems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/loginMgt/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/EmailSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/EmailSender$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/EmailSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/java/util/JSONFileManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/WEB-INF/classes/main/resources/DataElems.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/changeDesign.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/eval_process.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/finish.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/change_design_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/change_design_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/data_selection_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/data_selection_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/eval_process_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/eval_process_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/finish_page.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/introduction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/login_finished.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/privacyRiskView.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/register_finish.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/share.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/storeData.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/thankyou.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/crypt/CryptManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElemsReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/Participant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/Participant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/SaveInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/UserManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/exception/AuthenticationFailure.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/exception/UserExistException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/model/DataElement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/model/DataElement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/model/DataItems.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/model/DataItems.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/Converter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/introduction_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/introduction_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/privace_risk_view_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/privace_risk_view_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/purpose_identification_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/purpose_identification_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_relatedness_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_relatedness_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_sensitivity_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_sensitivity_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_visibility_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/set_visibility_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/share_data_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/share_data_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/store_data_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/store_data_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/font-awesome-animation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/fontawesome-webfontba72.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/fontawesome-webfontba72.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/fontawesome-webfontba72.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/fontawesome-webfontba72.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/fonts/glyphicons-halflings-regulard41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/style/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/thankyou_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SurveyStudy_war_exploded/thankyou_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElements.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/DataElems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/loginMgt/Participant.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/EmailSender$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/EmailSender$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/EmailSender.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/EmailSender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/java/util/JSONFileManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SurveyStudy/main/resources/DataElems.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/crypt/CryptManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/SaveInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/exception/AuthenticationFailure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/exception/UserExistException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/DataItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/DataItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Converter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/DataElements.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/loginMgt/Participant.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/EmailSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/EmailSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/JSONFileManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DataElems.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/changeDesign.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/change_design_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/eval_process.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/finish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/finish_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/change_design_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/change_design_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/data_selection_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/data_selection_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/eval_process_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/eval_process_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/finish_page.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/introduction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/introduction_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/data_selection_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login_finished.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_sensitivity_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/privacyRiskView.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/privace_risk_view_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_visibility_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/register_finish.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_relatedness_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/share.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/share_data_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/storeData.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/store_data_page.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/style/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/thankyou.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/thankyou_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/introduction_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/introduction_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/privace_risk_view_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/privace_risk_view_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/purpose_identification_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/purpose_identification_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/set_relatedness_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_relatedness_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/set_sensitivity_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_sensitivity_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/set_visibility_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/set_visibility_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/share_data_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/share_data_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/store_data_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/store_data_page.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/css/font-awesome-animation.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/style/css/font-awesome.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontba72.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/fonts/glyphicons-halflings-regulard41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/style/js/custom.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/thankyou_page.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/thankyou_page.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,20 +91,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="data_selection_page.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/data_selection_page.jsp">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="70" column="130" selection-start-line="70" selection-start-column="98" selection-end-line="70" selection-end-column="130" />
+            <state relative-caret-position="198">
+              <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="purpose_identification_page.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/purpose_identification_page.jsp">
+      <file leaf-file-name="thankyou_page.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/thankyou_page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state relative-caret-position="155">
+              <caret line="207" column="67" lean-forward="true" selection-start-line="207" selection-start-column="67" selection-end-line="207" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="introduction_page.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/introduction_page.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="43" column="38" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/style/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="3021" column="37" selection-start-line="3021" selection-start-column="31" selection-end-line="3021" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -115,8 +134,8 @@
       <list>
         <option value="Enum" />
         <option value="jsf" />
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -127,7 +146,14 @@
       <find>radio</find>
       <find>\&lt;\%\@ page import\=\&quot;main\.java\.loginMgt\.DataElemsReader\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;main\.java\.model\.DataElement\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;java\.util\.List\&quot; \%\&gt;\n\&lt;\%\@ page import\=\&quot;java\.util\.Arrays\&quot; \%\&gt;\&lt;\%\-\-\n  Created by IntelliJ IDEA\.\n  User\: Asus PC\n  Date\: 1\/10\/2017\n  Time\: 10\:16 AM\n  To change this template use File \| Settings \| File Templates\.\n\-\-\%\&gt;\n\&lt;\%\@ page contentType\=\&quot;text\/html\;charset\=UTF\-8\&quot; language\=\&quot;java\&quot; \%\&gt;\n\&lt;html\&gt;\n\&lt;head\&gt;\n    \&lt;title\&gt;User Study \- University of New South Wales\&lt;\/title\&gt;\n    \&lt;meta charset\=\&quot;utf\-8\&quot;\&gt;\n    \&lt;meta name\=\&quot;viewport\&quot; content\=\&quot;width\=device\-width\, initial\-scale\=1\, maximum\-scale\=1\&quot;\&gt;\n    \&lt;meta name\=\&quot;description\&quot; content\=\&quot;\&quot;\&gt;\n    \&lt;meta name\=\&quot;author\&quot; content\=\&quot;\&quot;\&gt;\n    \&lt;\!\-\-\[if IE\]\&gt;\n    \&lt;meta http\-equiv\=\&quot;X\-UA\-Compatible\&quot; content\=\&quot;IE\=edge\,chrome\=1\&quot;\&gt;\n    \&lt;\!\[endif\]\-\-\&gt;\n    \&lt;title\&gt;UNIQUE  BOOTSTRAP TEMPLATE \- Peterna \&lt;\/title\&gt;\n    \&lt;\!\-\-REQUIRED STYLE SHEETS\-\-\&gt;\n    \&lt;\!\-\- BOOTSTRAP CORE STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/bootstrap\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- FONTAWESOME STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/font\-awesome\.min\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\-ANIMATED FONTAWESOME STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/font\-awesome\-animation\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- CUSTOM STYLE CSS \-\-\&gt;\n    \&lt;link href\=\&quot;style\/css\/style\.css\&quot; rel\=\&quot;stylesheet\&quot; \/\&gt;\n    \&lt;\!\-\- GOOGLE FONT \-\-\&gt;\n    \&lt;link href\=\'http\:\/\/fonts\.googleapis\.com\/css\?family\=Open\+Sans\' rel\=\'stylesheet\' type\=\'text\/css\'\&gt;\n    \&lt;\!\-\- HTML5 shim and Respond\.js IE8 support of HTML5 elements and media queries \-\-\&gt;\n    \&lt;\!\-\-\[if lt IE 9\]\&gt;\n    \&lt;script src\=\&quot;https\:\/\/oss\.maxcdn\.com\/libs\/html5shiv\/3\.7\.0\/html5shiv\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;script src\=\&quot;https\:\/\/oss\.maxcdn\.com\/libs\/respond\.js\/1\.3\.0\/respond\.min\.js\&quot;\&gt;\&lt;\/script\&gt;\n    \&lt;\!\[endif\]\-\-\&gt;\n\n\n\&lt;\/head\&gt;\n\&lt;body \&gt;\n\&lt;section  id\=\&quot;services\-sec\&quot;\&gt;\n    \&lt;div class\=\&quot;container\&quot;\&gt;\n        \&lt;div class\=\&quot;row \&quot;\&gt;\n    \&lt;\%  List\&lt;DataElement\&gt; listofSelectElems \= DataElemsReader\.getInstance\(\)\.getCurrDataElemList\(\)\;\n        for \(DataElement currDE \: listofSelectElems\) \{\n            if\(currDE\.isSelected\(\)\)\{\n            String sensitivityVal \= request\.getParameter\(currDE\.getDataElemName\(\) \+ \&quot;sensitivity\&quot;\)\.toString\(\)\;\n    \%\&gt;\n            \&lt;li\&gt;You have selected \&lt;\%\=currDE\.getDataElemName\(\)\%\&gt; with a sensitivity \&lt;\%\= sensitivityVal\%\&gt;\&lt;\/li\&gt;\n            \&lt;\%\n            if \(sensitivityVal \!\= null\) \{\n\n                currDE\.setSensitivity\(Integer\.parseInt\(sensitivityVal\)\)\;\n            \}\n\n                    \}\n        \}\n\n\n    \%\&gt;\n    \&lt;h2\&gt;\&lt;strong\&gt;Select Data Items\&lt;\/strong\&gt; \&lt;\/h2\&gt;\n    \&lt;h6\&gt;How visible do you intend to make the data you decided to collect in the application design\?\&lt;\/h6\&gt;\n\n        \&lt;\%\n            for \(int iterator \= 0\; iterator\&lt; listofSelectElems\.size\(\)\; iterator\+\+\) \{\n                DataElement currDataElem \= listofSelectElems\.get\(iterator\)\;\n        if \(currDataElem\.isSelected\(\)\)\{\%\&gt;\n        \&lt;\/br\&gt;\&lt;\/br\&gt;\n        \&lt;form id\=\&quot;form\&quot; action\=\&quot;register\.jsp\&quot; onsubmit\=\&quot;return myFunction\(\)\&quot; method\=\&quot;post\&quot;\&gt;\n            \&lt;\%String currDataElemName \= currDataElem\.getDataElemName\(\)\;\%\&gt;\n            \&lt;li\&gt;\&lt;\%\=currDataElemName \%\&gt;\&lt;\/li\&gt;\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+\&quot;5\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;5\&quot; \/\&gt; Highly Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;4\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;4\&quot; \/\&gt; Somewhat Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;3\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;3\&quot; \/\&gt; Moderately Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;2\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;2\&quot; \/\&gt; Very low Visible\n            \&lt;input type\=\&quot;radio\&quot; id\= \&lt;\%\= currDataElemName \+ \&quot;1\&quot;\%\&gt;name\=\&lt;\%\= currDataElemName  \+ \&quot;visibility\&quot;\%\&gt; value\=\&quot;1\&quot; \/\&gt; Mot at all Visible\n\n\&lt;\%\n    \}\n\n                    \}\n\%\&gt;\n\n\n          \n                \&lt;div class\=\&quot;buttonHolder\&quot;\&gt;\&lt;button class\=\&quot;button\&quot; type\=\&quot;submit\&quot; form\=\&quot;form\&quot;\n                                                  value\=\&quot;Submit\&quot;\&gt;Next \&gt;\&gt;\&lt;\/button\&gt;\&lt;\/div\&gt;\n           \n\n    \&lt;\/form\&gt;\n        \&lt;\/div\&gt;\n    \&lt;\/div\&gt;\n\&lt;\/section\&gt;\n\&lt;\/body\&gt;\n\&lt;\/html\&gt;\n</find>
       <find>btn</find>
+      <find>header</find>
       <find>input</find>
+      <find>checkbox</find>
+      <find>special</find>
+      <find>uppercase</find>
+      <find>banner</find>
+      <find>button</find>
+      <find>wrapper</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Awanthika\IdeaProjects\SurveyStudy\web\style\img</dir>
@@ -158,7 +184,6 @@
         <option value="$PROJECT_DIR$/web/storeData.jsp" />
         <option value="$PROJECT_DIR$/web/login.jsp" />
         <option value="$PROJECT_DIR$/web/purpose.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/util/EmailSender.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/DataElement.java" />
         <option value="$PROJECT_DIR$/web/share.jsp" />
         <option value="$PROJECT_DIR$/web/register.jsp" />
@@ -169,22 +194,25 @@
         <option value="$PROJECT_DIR$/web/login_finished.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/model/DataItems.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/introduction_page.jsp" />
-        <option value="$PROJECT_DIR$/web/set_visibility_page.jsp" />
-        <option value="$PROJECT_DIR$/web/set_relatedness_page.jsp" />
-        <option value="$PROJECT_DIR$/web/set_sensitivity_page.jsp" />
-        <option value="$PROJECT_DIR$/web/thankyou_page.jsp" />
-        <option value="$PROJECT_DIR$/web/eval_process_page.jsp" />
-        <option value="$PROJECT_DIR$/web/change_design_page.jsp" />
-        <option value="$PROJECT_DIR$/web/privace_risk_view_page.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/loginMgt/DataElements.java" />
+        <option value="$PROJECT_DIR$/src/main/java/loginMgt/Participant.java" />
+        <option value="$PROJECT_DIR$/web/style/css/style.css" />
+        <option value="$PROJECT_DIR$/web/purpose_identification_page.jsp" />
         <option value="$PROJECT_DIR$/web/data_selection_page.jsp" />
         <option value="$PROJECT_DIR$/web/share_data_page.jsp" />
-        <option value="$PROJECT_DIR$/web/style/css/style.css" />
+        <option value="$PROJECT_DIR$/web/set_visibility_page.jsp" />
+        <option value="$PROJECT_DIR$/web/set_sensitivity_page.jsp" />
+        <option value="$PROJECT_DIR$/web/set_relatedness_page.jsp" />
+        <option value="$PROJECT_DIR$/web/privace_risk_view_page.jsp" />
+        <option value="$PROJECT_DIR$/web/eval_process_page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/util/EmailSender.java" />
+        <option value="$PROJECT_DIR$/web/final_page.jsp" />
+        <option value="$PROJECT_DIR$/web/change_design_page.jsp" />
         <option value="$PROJECT_DIR$/web/store_data_page.jsp" />
+        <option value="$PROJECT_DIR$/web/introduction_page.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/loginMgt/Participant.java" />
-        <option value="$PROJECT_DIR$/web/purpose_identification_page.jsp" />
+        <option value="$PROJECT_DIR$/web/style/css/main.css" />
+        <option value="$PROJECT_DIR$/web/thankyou_page.jsp" />
       </list>
     </option>
   </component>
@@ -205,10 +233,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="673" />
-    <option name="height" value="688" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -216,6 +244,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -273,32 +303,10 @@
               <item name="style" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SurveyStudy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SurveyStudy" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -538,12 +546,19 @@
       <workItem from="1530776083876" duration="6914000" />
       <workItem from="1530867022067" duration="499000" />
       <workItem from="1531105860207" duration="1135000" />
-      <workItem from="1531203913582" duration="7253000" />
+      <workItem from="1531203913582" duration="32065000" />
+      <workItem from="1531364557827" duration="99000" />
+      <workItem from="1531366209148" duration="4426000" />
+      <workItem from="1531445192670" duration="15785000" />
+      <workItem from="1531518593123" duration="7003000" />
+      <workItem from="1531813770854" duration="1226000" />
+      <workItem from="1531967415139" duration="8131000" />
+      <workItem from="1532044944757" duration="5118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97159000" />
+    <option name="totallyTimeSpent" value="163759000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -568,9 +583,9 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4244833" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46581876" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.238653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12445095" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -592,67 +607,65 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/web/store_data_page.jsp</url>
-          <line>41</line>
+          <url>file://$PROJECT_DIR$/web/set_sensitivity_page.jsp</url>
+          <line>43</line>
           <properties />
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="48" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>howStore</expression-string>
+        <expression-string>selecteds.length</expression-string>
         <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>2*this.getRelatedness()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>session.getAttribute(&quot;selectedData&quot;).toString().split(&quot;,&quot;)</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getSensitivity()*this.getVisibility()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>session.getAttribute(&quot;selectedData&quot;).toString()</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getSensitivity()*this.getVisibility()/(2.0 * this.getRelatedness())</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>selecteds</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getSensitivity()/this.getVisibility()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>request.getParameter(&quot;NAME&quot;)</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getSensitivity()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>request</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getPrivacyRisk()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>selectedDatalist.length -1</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>2 * this.getRelatedness()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>selectedDatalist.length</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>this.getVisibility()</expression-string>
-        <language-id>JAVA</language-id>
+        <expression-string>howStore</expression-string>
+        <language-id>JSP</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.java" />
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -711,13 +724,7 @@
     <entry file="file://$PROJECT_DIR$/web/style/font-awesome.min.css" />
     <entry file="file://$PROJECT_DIR$/web/style/main.css" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElems.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/ParticipantIDGene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -728,13 +735,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/UserManager.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElemsReader.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/util/SaveInformation.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/EmailSender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/DataElems.txt" />
     <entry file="file://$PROJECT_DIR$/web/style/img/sativa.png">
       <provider selected="true" editor-type-id="images" />
@@ -753,62 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/finish_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/change_design_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/privace_risk_view_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/set_relatedness_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/set_sensitivity_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="69" selection-start-line="86" selection-start-column="69" selection-end-line="86" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/set_visibility_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="89" column="26" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/thankyou_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1547">
-          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/eval_process_page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1615">
-          <caret line="95" column="42" selection-start-line="95" selection-start-column="42" selection-end-line="95" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/DataElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -823,125 +767,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElements.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/Participant.java" />
+    <entry file="file://$PROJECT_DIR$/web/style/css/style.css" />
+    <entry file="file://$PROJECT_DIR$/web/finish_page.jsp" />
     <entry file="file://$PROJECT_DIR$/web/share_data_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+        <state relative-caret-position="595">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/style/css/style.css">
+    <entry file="file://$PROJECT_DIR$/web/set_visibility_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="697">
-          <caret line="280" column="16" lean-forward="true" selection-start-line="280" selection-start-column="16" selection-end-line="280" selection-end-column="16" />
+          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/DataElements.java">
+    <entry file="file://$PROJECT_DIR$/web/set_sensitivity_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="46" />
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/introduction_page.jsp">
+    <entry file="file://$PROJECT_DIR$/web/set_relatedness_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="41" column="42" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="612">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/store_data_page.jsp">
+    <entry file="file://$PROJECT_DIR$/web/privace_risk_view_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/EmailSender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="476">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/loginMgt/Participant.java">
+    <entry file="file://$PROJECT_DIR$/web/change_design_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="56" column="18" lean-forward="true" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#676#677#0" expanded="true" />
-            <element signature="e#714#715#0" expanded="true" />
-            <element signature="e#865#866#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-            <element signature="e#1633#1634#0" expanded="true" />
-            <element signature="e#1668#1669#0" expanded="true" />
-            <element signature="e#1735#1736#0" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-            <element signature="e#1823#1824#0" expanded="true" />
-            <element signature="e#1859#1860#0" expanded="true" />
-            <element signature="e#1917#1918#0" expanded="true" />
-            <element signature="e#1967#1968#0" expanded="true" />
-            <element signature="e#2004#2005#0" expanded="true" />
-            <element signature="e#2040#2041#0" expanded="true" />
-            <element signature="e#2095#2096#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
-            <element signature="e#2269#2270#0" expanded="true" />
-            <element signature="e#2317#2318#0" expanded="true" />
-            <element signature="e#2356#2357#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-            <element signature="e#2453#2454#0" expanded="true" />
-            <element signature="e#2507#2508#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2639#2640#0" expanded="true" />
-            <element signature="e#2691#2692#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#2827#2828#0" expanded="true" />
-            <element signature="e#2881#2882#0" expanded="true" />
-            <element signature="e#2922#2923#0" expanded="true" />
-            <element signature="e#2962#2963#0" expanded="true" />
-            <element signature="e#3025#3026#0" expanded="true" />
-            <element signature="e#3083#3084#0" expanded="true" />
-            <element signature="e#3118#3119#0" expanded="true" />
-            <element signature="e#3152#3153#0" expanded="true" />
-            <element signature="e#3203#3204#0" expanded="true" />
-            <element signature="e#3249#3250#0" expanded="true" />
-            <element signature="e#3282#3283#0" expanded="true" />
-            <element signature="e#3314#3315#0" expanded="true" />
-            <element signature="e#3361#3362#0" expanded="true" />
-            <element signature="e#3403#3404#0" expanded="true" />
-            <element signature="e#3444#3445#0" expanded="true" />
-            <element signature="e#3483#3484#0" expanded="true" />
-            <element signature="e#3544#3545#0" expanded="true" />
-            <element signature="e#3593#3594#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" column="128" selection-start-line="24" selection-start-column="128" selection-end-line="24" selection-end-column="128" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/data_selection_page.jsp">
+    <entry file="file://$PROJECT_DIR$/web/eval_process_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="70" column="130" selection-start-line="70" selection-start-column="98" selection-end-line="70" selection-end-column="130" />
+        <state relative-caret-position="2448">
+          <caret line="144" column="11" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/final_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="34" column="66" lean-forward="true" selection-start-line="28" selection-end-line="34" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/purpose_identification_page.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        <state relative-caret-position="153">
+          <caret line="53" column="16" lean-forward="true" selection-start-line="53" selection-start-column="7" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/store_data_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-513">
+          <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/data_selection_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="86" column="27" selection-start-line="86" selection-start-column="27" selection-end-line="86" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/introduction_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="43" column="38" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/style/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="3021" column="37" selection-start-line="3021" selection-start-column="31" selection-end-line="3021" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/thankyou_page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="207" column="67" lean-forward="true" selection-start-line="207" selection-start-column="67" selection-end-line="207" selection-end-column="67" />
         </state>
       </provider>
     </entry>

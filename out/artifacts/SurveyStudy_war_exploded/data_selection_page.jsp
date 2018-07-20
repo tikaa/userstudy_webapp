@@ -1,42 +1,19 @@
-<%@ page import="main.java.model.DataElement" %>
-<%@ page import="javax.xml.crypto.Data" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.Arrays" %>
 <%@ page import="main.java.model.DataItems" %>
-<%@ page import="main.java.loginMgt.DataElements" %>
+<%@ page import="javax.xml.crypto.Data" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <title>User Study - University of New South Wales</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <![endif]-->
-    <title>Research Survey - University of New South Wales, Australia </title>
-    <!--REQUIRED STYLE SHEETS-->
-    <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="style/css/bootstrap.css" rel="stylesheet"/>
-    <!-- FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome.min.css" rel="stylesheet"/>
-    <!--ANIMATED FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome-animation.css" rel="stylesheet"/>
-    <!-- CUSTOM STYLE CSS -->
-    <link href="style/css/style.css" rel="stylesheet"/>
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/css/main.css" rel="stylesheet">
     <script>
         function validateForm() {
-            var checked=false;
+            var checked = false;
+            var selectedItems = "";
             var elements = document.getElementsByName("check");
-            for(var i=0; i < elements.length; i++){
-                if(elements[i].checked) {
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].checked) {
                     checked = true;
                 }
             }
@@ -47,48 +24,79 @@
 
         }
     </script>
-
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+    </script>
 </head>
-<body>
+<body clas="">
+<section class="wrapper style2 special" id="two">
+    <div class="inner narrow">
+        <header>
+            <h3> Select the Data elements from an end user you would consider collecting (to store in the app, or to
+                share with third parties) for the
+                application scenario : </h3>
+        </header>
+        <button id="show" class="button" >Application Scenario</button>
 
-<div id="home-sec">
-    <div class="container" id="home">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="head-sub-main">Survey on Privacy Concerned Software Development</h2>
-            </div>
-        </div>
+        <dialog id="window">
+            <h3>Application Design Scenario</h3>
+            This is a mobile application that allows users to search restaurants and order meals.
+            The app will enable users to get food delivered, or order and collect according to their preference.
+
+            You can decide on additional features to make the app more usable and popular.
+
+            Also, you can collect and use user data to suggest meals and restaurants to users, and also share order details with restaurants to earn profits.
+
+            The app is to be freely available for downloading. You can decide on,
+
+            <li align="left">
+                Collect user data and use them within the application to provide users with enhanced features
+            </li><li align="left">
+            Share data with third parties (restaurants, hotels, advertisers) to gain profit from data
+        </li>
+            <li align="left">
+                Store and keep user data for future use.
+            </li>
+            <button id="exit">Close Dialog</button>
+        </dialog>
+        <FORM name="selectionform" ACTION="purpose_identification_page.jsp" METHOD="post"
+              onsubmit="return validateForm()">
+            <table id="customers">
+                <tr>
+                    <th>Data Item</th>
+                    <th>Select</th>
+                </tr>
+                <%
+                    for (DataItems dataElem : DataItems.values()) {
+                        String dataName = dataElem.toString();
+                %>
+                <tr>
+                    <td><%=dataName %>
+                    </td>
+                    <td><INPUT TYPE="CHECKBOX" NAME="check" VALUE=<%=dataName %>>
+
+                </tr>
+                <%}%>
+            </table>
+
+            <INPUT class="button" TYPE="SUBMIT" VALUE="Continue >>">
+        </FORM>
     </div>
-</div>
-    <section id="services-sec">
-        <div class="container">
-            <div class="row ">
-                <h1 class="head-last">
-
-                    Select the Data elements from an end user you would consider collecting (to store in the app, or to
-                    share with third parties) for the
-                    application scenario : </h1>
-                <FORM name="selectionform" ACTION="purpose_identification_page.jsp" METHOD="post" onsubmit="return validateForm()">
-                    <table id="customers">
-
-                        <%
-                            for (DataItems dataElem : DataItems.values()) {
-                                String dataName = dataElem.toString();
-                        %>
-                        <tr>
-                            <td><%=dataName %>
-                            </td>
-                            <td><INPUT TYPE="CHECKBOX" NAME="check" style="width: 300px;" VALUE=<%=dataName %>>
-
-                        </tr>
-                        <BR><%}%>
-                       </table> <br><br>
-                    <INPUT TYPE="SUBMIT" class="btn btn-danger btn-lg head-btn-one" VALUE="Continue >>">
-                </FORM>
+</section>
 
 
-            </div>
-        </div>
-    </section>
+
+<script>
+
+    (function() {
+        var dialog = document.getElementById('window');
+        document.getElementById('show').onclick = function() {
+            dialog.show();
+        };
+        document.getElementById('exit').onclick = function() {
+            dialog.close();
+        };
+    })();
+</script>
 </body>
 </html>

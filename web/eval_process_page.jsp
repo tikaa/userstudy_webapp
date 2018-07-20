@@ -6,61 +6,38 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="main.java.loginMgt.ParticipantIDGene" %>
-<%@ page import="main.java.loginMgt.Participant" %>
-<%@ page import="main.java.model.DataElement" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-
     <title>User Study - University of New South Wales</title>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--[if IE]>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <![endif]-->
-    <title>Research Survey - University of New South Wales, Australia </title>
-    <!--REQUIRED STYLE SHEETS-->
-    <!-- BOOTSTRAP CORE STYLE CSS -->
-    <link href="style/css/bootstrap.css" rel="stylesheet"/>
-    <!-- FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome.min.css" rel="stylesheet"/>
-    <!--ANIMATED FONTAWESOME STYLE CSS -->
-    <link href="style/css/font-awesome-animation.css" rel="stylesheet"/>
-    <!-- CUSTOM STYLE CSS -->
-    <link href="style/css/style.css" rel="stylesheet"/>
-    <!-- GOOGLE FONT -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style/css/main.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+    </script>
     <%
-        List<DataElement> changeDataElemList = Participant.getInstance().getDataElemList();
+        String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
+        StringBuffer changeDesign = new StringBuffer();
+        changeDesign.append("___________-------"+"CHANGING DESIGN"+"-------_________________");
         String[] shareVals = request.getParameterValues("share");
-        String[] storeVals = request.getParameterValues("share");
+        String[] storeVals = request.getParameterValues("store");
 
         if (storeVals != null) {
             List storeList = Arrays.asList(storeVals);
-            for (int i = 0; i < changeDataElemList.size(); i++) {
-                DataElement currDataElement = changeDataElemList.get(i);
-                if (storeList.contains(currDataElement.getDataElemName())) {
-                    currDataElement.setPostStored(true);
-                    String parameterHow = request.getParameter(currDataElement.getDataElemName() + "howstore");
+            for (int i = 0; i <selectedDatalist.length;i++) {
+                String currDataElement = selectedDatalist[i];
+                if (storeList.contains(currDataElement)) {
+                    changeDesign.append(currDataElement + "---------_" + "post Stored");
+                    String parameterHow = request.getParameter(currDataElement + "howstore");
                     if (parameterHow != null && parameterHow != "" && !parameterHow.isEmpty()) {
-                        currDataElement.setHowPostStored(parameterHow);
+                        changeDesign.append(currDataElement + "---------_" + "post Stored as" +parameterHow);
                     }
-                    String parameterWhere = request.getParameter(currDataElement.getDataElemName() + "wherestore");
+                    String parameterWhere = request.getParameter(currDataElement + "wherestore");
                     if (parameterWhere != null && !parameterWhere.isEmpty() && parameterWhere != "") {
-                        currDataElement.setWherePostStored(parameterWhere);
+                        changeDesign.append(currDataElement + "---------_" + "post Stored at" +parameterWhere);
                     }
                 }
 
@@ -70,162 +47,235 @@
         if (shareVals != null) {
             List shareList = Arrays.asList(shareVals);
 
-            for (int i = 0; i < changeDataElemList.size(); i++) {
-                DataElement currDataElement = changeDataElemList.get(i);
-                if (shareList.contains(currDataElement.getDataElemName())) {
-                    currDataElement.setPostStored(true);
-                    String parameterHow = request.getParameter(currDataElement.getDataElemName() + "howshare");
+            for (int i = 0; i < selectedDatalist.length; i++) {
+                String currDataElementName = selectedDatalist[i];
+                if (shareList.contains(currDataElementName)) {
+                    changeDesign.append(currDataElementName + "---------Post Shared _");
+                    String parameterHow = request.getParameter(currDataElementName + "howshare");
                     if (parameterHow != null && parameterHow != "" && !parameterHow.isEmpty()) {
-                        currDataElement.setHowPostShared(parameterHow);
+                        changeDesign.append(currDataElementName + "---------Post Shared _" + parameterHow);
                     }
 
                 }
 
             }
         }
-
+      session.setAttribute("change_design", changeDesign);
         //response.sendRedirect("data_selection_page.jsp");
-    %>;
+    %>
+    <script>
+        function validateForm() {
+            var checked= [];
+            var i = 0;
+            checked[i] = false;
+            var elements = document.getElementsByName("quickly");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("better");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("informed");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("likely");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("skills");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("ease");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("interesting");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("enjoyable");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("clear");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("effort");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            for (var val in checked) {
+                if (checked[val] != true) {
+                    alert('Please complete all questions in this form');
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
 </head>
 <body>
-
-<div id="home-sec">
-    <div class="container" id="home">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="head-sub-main">Survey on Privacy Concerned Software Development</h2>
-            </div>
-        </div>
-    </div>
-</div>
-<section id="services-sec">
-    <div class="container">
-        <div class="row ">
-            <h1 class="head-last">
+<section class="wrapper style2 special" id="two">
+    <div class="inner narrow">
+        <header>
+            <h2 class="head-last">
                 Share you thoughts on the process you followed to understand the privacy risk of data elements.
-            </h1>
+            </h2></header>
+            <form id="form" action="thankyou_page.jsp" onsubmit="return validateForm()" method="post">
+                <table id="customers">
+                    <tr> <th>This process helped me to make my decisions on data collection, storage and sharing quickly</th></tr>
+                    <tr><td>
+                <input type="radio" name="quickly"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="quickly"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="quickly"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="quickly"
+                       value="1"/> Strongly Disagree
+                    </td></tr>  <tr>
+                    <th>This process helped me to make my decisions on data collection, storage and sharing better</th></tr>
+                    <tr><td>
+                <input type="radio" name="better"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="better"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="better"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="better"
+                       value="1"/> Strongly Disagree
+                    </td></tr>
+                    <tr>  <th>After following this process, I'm better informed about user privacy concerns on data.</th></tr>
+                    <tr><td>
+                <input type="radio" name="informed"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="informed"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="informed"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="informed"
+                       value="1"/> Strongly Disagree
+                    </td></tr>
+                <tr><th>If I'm provided with the support I am likely use this process when I design software systems.
+                </th> </tr>  <tr><td>
+                <input type="radio" name="likely"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="likely"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="likely"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="likely"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                    <tr><th>I already have the necessary skills required to follow this process.
+                    </th> </tr>  <tr><td>
+                <input type="radio" name="skills"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="skills"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="skills"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="skills"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                <tr><th>It was easy for me to interact with this process.
+                </th> </tr>  <tr><td>
+                <input type="radio" name="ease"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="ease"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="ease"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="ease"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                <tr><th>It was interesting to follow this process.
+                    </th> </tr>  <tr><td>
+                <input type="radio" name="interesting"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="interesting"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="interesting"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="interesting"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                <tr><th>Following this process was enjoyable.
+                    </th> </tr>  <tr><td>
+                <input type="radio" name="enjoyable"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="enjoyable"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="enjoyable"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="enjoyable"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                <tr><th>Following this process was clear and easy.
+                </th> </tr>  <tr><td>
+                <input type="radio" name="clear"
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
+                <input type="radio" name="clear"
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
+                <input type="radio" name="clear"
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                <input type="radio" name="clear"
+                       value="1"/> Strongly Disagree
+                </td></tr>
+                <tr><th>Following this process required little mental effort.  </th> </tr>  <tr><td>
 
-            <form id="form" action="thankyou_page.jsp" onsubmit="return myFunction()" method="post">
-                <h3>This process helped me to make my decisions on data collection, storage and sharing quickly</h3>
-                </br>
-                <input type="radio" name="quickly"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="quickly"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="quickly"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="quickly"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>This process helped me to make my decisions on data collection, storage and sharing better</h3>
-                </br>
-                <input type="radio" name="better"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="better"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="better"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="better"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>After following this process, I'm better informed about user privacy concerns on data.</h3>
-                </br>
-                <input type="radio" name="informed"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="informed"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="informed"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="informed"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>If I'm provided with the support I am likely use this process when I design software systems.
-                </h3></br>
-                <input type="radio" name="likely"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="likely"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="likely"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="likely"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>I already have the necessary skills required to follow this process.</h3>
-                </br>
-                <input type="radio" name="skills"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="skills"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="skills"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="skills"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>It was easy for me to interact with this process.</h3>
-                </br>
-                <input type="radio" name="ease"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="ease"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="ease"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="ease"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>It was interesting to follow this process.</h3>
-                </br>
-                <input type="radio" name="interesting"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="interesting"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="interesting"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="interesting"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>Following this process was enjoyable.</h3>
-                </br>
-                <input type="radio" name="enjoyable"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="enjoyable"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="enjoyable"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="enjoyable"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>Following this process was clear and easy.</h3>
-                </br>
-                <input type="radio" name="clear"
-                       value="4"/> Strongly Agree
-                <input type="radio" name="clear"
-                       value="3"/> Somewhat Agree
-                <input type="radio" name="clear"
-                       value="2"/> Somewhat Disagree
-                <input type="radio" name="clear"
-                       value="1"/> Strongly Disagree
-                </br></br></br>
-                <h3>Following this process required little mental effort.</h3>
-                </br>
                 <input type="radio" name="effort"
-                       value="4"/> Strongly Agree
+                       value="4"/> Strongly Agree </td></tr> <tr><td>
                 <input type="radio" name="effort"
-                       value="3"/> Somewhat Agree
+                       value="3"/> Somewhat Agree </td></tr> <tr><td>
                 <input type="radio" name="effort"
-                       value="2"/> Somewhat Disagree
+                       value="2"/> Somewhat Disagree </td></tr> <tr><td>
                 <input type="radio" name="effort"
                        value="1"/> Strongly Disagree
-                </br></br></br>
+                </td></tr>
+                </table>
 
                 <div class="buttonHolder">
-                    <button class="btn btn-danger btn-lg head-btn-one" type="submit" form="form"
+                    <button class="button" style="vertical-align:middle" type="submit" form="form"
                             value="Submit">Next >>
                     </button>
                 </div>
             </form>
-        </div>
     </div>
 </section>
-<br><br>
 </body>
 </html>
