@@ -3881,6 +3881,29 @@ TABLE STYLES
 	color: white;
 }
 
+#mytable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#mytable td, #mytable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#mytable tr:nth-child(even){background-color: #f2f2f2;}
+
+#mytable tr:hover {background-color: #ddd;}
+
+#mytable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #009a9c;
+    color: white;
+}
+
 dialog {
 	width: 500px;
 	background:#e8e8e8;

@@ -64,7 +64,40 @@
                     <th>Data Element</th>
                     <th> Purpose for Collection</th>
                 </tr>
+                <button id="show" class="button" >Show Application Scenario</button>
 
+                <dialog id="window">
+                    <h3>Application Design Scenario</h3>
+                    <p align="left">
+                        This is a web-based health-care application that allows remote consultation with medical professionals,
+                        general practitioners and specialists, for a payment. Users should be able to browse through a registered
+                        list of medical professionals and chat (text/video) with them on their health problems for advice.
+                        Doctors and health-care professionals can register on the application to earn by providing their expertise to users.
+                        The application is to be freely available on-line (desktop/mobile). You can decide on,
+
+                    <li align="left">
+                        Collect user data and use them within the application to provide users with enhanced features
+                    </li><li align="left">
+                    Share data with third parties (hospitals, insurance providers and other health care providers) to gain profit from data.
+                </li>
+                    <li align="left">
+                        Store and keep user data for future use.
+                    </li>
+                    </p>
+                    <button id="exit">Close Dialog</button>
+                </dialog>
+                <script>
+
+                    (function() {
+                        var dialog = document.getElementById('window');
+                        document.getElementById('show').onclick = function() {
+                            dialog.show();
+                        };
+                        document.getElementById('exit').onclick = function() {
+                            dialog.close();
+                        };
+                    })();
+                </script>
                 <FORM name="purposeForm" ACTION="store_data_page.jsp" METHOD="post" onsubmit="return validateForm()">
                 <%String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
                      for (int val =0; val<selectedDatalist.length; val++) {

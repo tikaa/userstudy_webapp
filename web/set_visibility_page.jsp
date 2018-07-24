@@ -49,6 +49,40 @@
                 How visible do you intend to make the data you decided to collect in the application design?
             </h2></header>
     </div>
+    <button id="show" class="button" >Show Application Scenario</button>
+
+    <dialog id="window">
+        <h3>Application Design Scenario</h3>
+        <p align="left">
+            This is a web-based health-care application that allows remote consultation with medical professionals,
+            general practitioners and specialists, for a payment. Users should be able to browse through a registered
+            list of medical professionals and chat (text/video) with them on their health problems for advice.
+            Doctors and health-care professionals can register on the application to earn by providing their expertise to users.
+            The application is to be freely available on-line (desktop/mobile). You can decide on,
+
+        <li align="left">
+            Collect user data and use them within the application to provide users with enhanced features
+        </li><li align="left">
+        Share data with third parties (hospitals, insurance providers and other health care providers) to gain profit from data.
+    </li>
+        <li align="left">
+            Store and keep user data for future use.
+        </li>
+        </p>
+        <button id="exit">Close Dialog</button>
+    </dialog>
+    <script>
+
+        (function() {
+            var dialog = document.getElementById('window');
+            document.getElementById('show').onclick = function() {
+                dialog.show();
+            };
+            document.getElementById('exit').onclick = function() {
+                dialog.close();
+            };
+        })();
+    </script>
     <div class="container">
         <div class="row ">
             <%  String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
@@ -61,6 +95,8 @@
             <p>Visibility implies how visible the data is by default in the application when the user reveal the data into the application.
             That is, you may design the application so that the data the user disclose will be visible in the app for other users, for the organization that developed the application (higher visibility), or, you could design the application
             so that the data the user disclose is only visible to the user himself which is very low visibility.</p>
+
+
             <form id="form" action="set_relatedness_page.jsp" onsubmit="return validateForm()" method="post">
             <%
                 for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {

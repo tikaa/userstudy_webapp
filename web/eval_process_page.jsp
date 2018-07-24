@@ -21,7 +21,7 @@
     <%
         String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
         StringBuffer changeDesign = new StringBuffer();
-        changeDesign.append("___________-------"+"CHANGING DESIGN"+"-------_________________");
+        changeDesign.append("___________________-------"+"CHANGING DESIGN"+"-------_________________");
         String[] shareVals = request.getParameterValues("share");
         String[] storeVals = request.getParameterValues("store");
 
@@ -96,7 +96,7 @@
                 }
             }
             i++;
-            var elements = document.getElementsByName("skills");
+            var elements = document.getElementsByName("decisions");
             for(var elemN=0; elemN < elements.length; elemN++){
                 if(elements[elemN].checked) {
                     checked[i] = true;
@@ -138,6 +138,19 @@
                 }
             }
             i++;
+            var elements = document.getElementsByName("skills");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("use");
+            for(var elemN=0; elemN < elements.length; elemN++){
+                if(elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
             for (var val in checked) {
                 if (checked[val] != true) {
                     alert('Please complete all questions in this form');
@@ -157,7 +170,7 @@
             </h2></header>
             <form id="form" action="thankyou_page.jsp" onsubmit="return validateForm()" method="post">
                 <table id="customers">
-                    <tr> <th>This process helped me to make my decisions on data collection, storage and sharing quickly</th></tr>
+                    <tr> <th>This method helped me to understand the data I use in the system design better.</th></tr>
                     <tr><td>
                 <input type="radio" name="quickly"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -168,7 +181,7 @@
                 <input type="radio" name="quickly"
                        value="1"/> Strongly Disagree
                     </td></tr>  <tr>
-                    <th>This process helped me to make my decisions on data collection, storage and sharing better</th></tr>
+                    <th>Understanding data is important for me to implement privacy in system designs.</th></tr>
                     <tr><td>
                 <input type="radio" name="better"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -179,7 +192,7 @@
                 <input type="radio" name="better"
                        value="1"/> Strongly Disagree
                     </td></tr>
-                    <tr>  <th>After following this process, I'm better informed about user privacy concerns on data.</th></tr>
+                    <tr>  <th>Understanding data helps me to make my decisions on data collection, sharing and storage better when I design the system.</th></tr>
                     <tr><td>
                 <input type="radio" name="informed"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -190,7 +203,7 @@
                 <input type="radio" name="informed"
                        value="1"/> Strongly Disagree
                     </td></tr>
-                <tr><th>If I'm provided with the support I am likely use this process when I design software systems.
+                <tr><th>Understanding data helps me to make my decisions on data collection, sharing and storage quickly when I design systems.
                 </th> </tr>  <tr><td>
                 <input type="radio" name="likely"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -201,18 +214,21 @@
                 <input type="radio" name="likely"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                    <tr><th>I already have the necessary skills required to follow this process.
+                    <tr><th>After following this process I am better informed about making decisions to protect user privacy in a system design.
                     </th> </tr>  <tr><td>
-                <input type="radio" name="skills"
+                <input type="radio" name="decisions"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
-                <input type="radio" name="skills"
+                <input type="radio" name="decisions"
                        value="3"/> Somewhat Agree </td></tr> <tr><td>
-                <input type="radio" name="skills"
+                <input type="radio" name="decisions"
                        value="2"/> Somewhat Disagree </td></tr> <tr><td>
-                <input type="radio" name="skills"
+                <input type="radio" name="decisions"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                <tr><th>It was easy for me to interact with this process.
+                <tr><th>This model provides the required
+                    understanding of data for me to manage data and
+                    provide end user privacy in a
+                    software system design.
                 </th> </tr>  <tr><td>
                 <input type="radio" name="ease"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -223,7 +239,7 @@
                 <input type="radio" name="ease"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                <tr><th>It was interesting to follow this process.
+                <tr><th>Understanding data makes my work easier when I implement privacy in system designs.
                     </th> </tr>  <tr><td>
                 <input type="radio" name="interesting"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -234,7 +250,7 @@
                 <input type="radio" name="interesting"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                <tr><th>Following this process was enjoyable.
+                <tr><th>This method makes it easy for me to understand data.
                     </th> </tr>  <tr><td>
                 <input type="radio" name="enjoyable"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -245,7 +261,7 @@
                 <input type="radio" name="enjoyable"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                <tr><th>Following this process was clear and easy.
+                <tr><th>Following this process was easy.
                 </th> </tr>  <tr><td>
                 <input type="radio" name="clear"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -256,7 +272,7 @@
                 <input type="radio" name="clear"
                        value="1"/> Strongly Disagree
                 </td></tr>
-                <tr><th>Following this process required little mental effort.  </th> </tr>  <tr><td>
+                <tr><th>Following this process was interesting.  </th> </tr>  <tr><td>
 
                 <input type="radio" name="effort"
                        value="4"/> Strongly Agree </td></tr> <tr><td>
@@ -266,6 +282,28 @@
                        value="2"/> Somewhat Disagree </td></tr> <tr><td>
                 <input type="radio" name="effort"
                        value="1"/> Strongly Disagree
+                </td></tr>
+                    <tr><th>I already have the necessary skills to follow this process.</th> </tr>  <tr><td>
+
+                    <input type="radio" name="skills"
+                           value="4"/> Strongly Agree </td></tr> <tr><td>
+                    <input type="radio" name="skills"
+                           value="3"/> Somewhat Agree </td></tr> <tr><td>
+                    <input type="radio" name="skills"
+                           value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                    <input type="radio" name="skills"
+                           value="1"/> Strongly Disagree
+                </td></tr>
+                    <tr><th>If I'm provided with support I'm likely to use this model when I design systems.</th> </tr>  <tr><td>
+
+                    <input type="radio" name="use"
+                           value="4"/> Strongly Agree </td></tr> <tr><td>
+                    <input type="radio" name="use"
+                           value="3"/> Somewhat Agree </td></tr> <tr><td>
+                    <input type="radio" name="use"
+                           value="2"/> Somewhat Disagree </td></tr> <tr><td>
+                    <input type="radio" name="use"
+                           value="1"/> Strongly Disagree
                 </td></tr>
                 </table>
 

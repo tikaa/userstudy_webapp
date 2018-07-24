@@ -36,29 +36,40 @@
                 share with third parties) for the
                 application scenario : </h3>
         </header>
-        <button id="show" class="button" >Application Scenario</button>
+        <button id="show" class="button" >Show Application Scenario</button>
 
         <dialog id="window">
             <h3>Application Design Scenario</h3>
-            This is a mobile application that allows users to search restaurants and order meals.
-            The app will enable users to get food delivered, or order and collect according to their preference.
-
-            You can decide on additional features to make the app more usable and popular.
-
-            Also, you can collect and use user data to suggest meals and restaurants to users, and also share order details with restaurants to earn profits.
-
-            The app is to be freely available for downloading. You can decide on,
+            <p align="left">
+                This is a web-based health-care application that allows remote consultation with medical professionals,
+                general practitioners and specialists, for a payment. Users should be able to browse through a registered
+                list of medical professionals and chat (text/video) with them on their health problems for advice.
+                Doctors and health-care professionals can register on the application to earn by providing their expertise to users.
+                The application is to be freely available on-line (desktop/mobile). You can decide on,
 
             <li align="left">
                 Collect user data and use them within the application to provide users with enhanced features
             </li><li align="left">
-            Share data with third parties (restaurants, hotels, advertisers) to gain profit from data
+            Share data with third parties (hospitals, insurance providers and other health care providers) to gain profit from data.
         </li>
             <li align="left">
                 Store and keep user data for future use.
             </li>
+            </p>
             <button id="exit">Close Dialog</button>
         </dialog>
+        <script>
+
+            (function() {
+                var dialog = document.getElementById('window');
+                document.getElementById('show').onclick = function() {
+                    dialog.show();
+                };
+                document.getElementById('exit').onclick = function() {
+                    dialog.close();
+                };
+            })();
+        </script>
         <FORM name="selectionform" ACTION="purpose_identification_page.jsp" METHOD="post"
               onsubmit="return validateForm()">
             <table id="customers">
@@ -83,20 +94,5 @@
         </FORM>
     </div>
 </section>
-
-
-
-<script>
-
-    (function() {
-        var dialog = document.getElementById('window');
-        document.getElementById('show').onclick = function() {
-            dialog.show();
-        };
-        document.getElementById('exit').onclick = function() {
-            dialog.close();
-        };
-    })();
-</script>
 </body>
 </html>
