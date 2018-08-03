@@ -7,8 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
-<body onload="noBack();"
-      onpageshow="if (event.persisted) noBack();" onunload="">
+    <script language="javascript" type="text/javascript">
+        window.history.forward();
+    </script>
     <%
         StringBuffer evalParams = new StringBuffer();
         if (request.getParameter("better")!= null) {
@@ -196,25 +197,25 @@
                     <tr>
                         <td>
                             <input type="radio" name="age"
-                                   value="4"/> Above 18 upto24
+                                   value="Above 18 upto24"/> Above 18 upto24
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="age"
-                                   value="3"/> Above 24 upto 32
+                                   value="Above 24 upto 32"/> Above 24 upto 32
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="age"
-                                   value="2"/> Above 32 upto 40
+                                   value="Above 32 upto 40"/> Above 32 upto 40
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="age"
-                                   value="1"/> Above 40
+                                   value="Above 40"/> Above 40
                         </td>
                     </tr>
                     <tr>
@@ -223,19 +224,19 @@
                     <tr>
                         <td>
                             <input type="radio" name="gender"
-                                   value="4"/> Female
+                                   value="Female"/> Female
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="gender"
-                                   value="3"/> Male
+                                   value="Male"/> Male
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="gender"
-                                   value="2"/> Prefer not to say
+                                   value="Prefer Not to Say"/> Prefer not to say
                         </td>
                     </tr>
                     <tr>
@@ -244,37 +245,37 @@
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="4"/> Software Developer
+                                   value="Software Developer"/> Software Developer
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="3"/> Software Architect
+                                   value="Software Architect"/> Software Architect
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="2"/> Owns a software company
+                                   value="Owns a software company"/> Owns a software company
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="2"/> A Student
+                                   value="A Student"/> A Student
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="2"/> Freelancer
+                                   value="Freelancer"/> Freelancer
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="occupation"
-                                   value="2"/> None of the above
+                                   value="None of the above"/> None of the above
                         </td>
                     </tr>
                     <tr>
@@ -283,25 +284,25 @@
                     <tr>
                         <td>
                             <input type="radio" name="experience"
-                                   value="4"/> 0- upto 2 years
+                                   value="0- upto 2 years"/> 0- upto 2 years
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="experience"
-                                   value="3"/> more than 2 upto 5 years
+                                   value="more than 2 upto 5 years"/> more than 2 upto 5 years
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="experience"
-                                   value="2"/> more than 5 upto 10 years
+                                   value="more than 5 upto 10 years"/> more than 5 upto 10 years
                         </td>
                     </tr>
                     <tr>
                         <td>
                             <input type="radio" name="experience"
-                                   value="2"/> more than 10 years
+                                   value="more than 10 years"/> more than 10 years
                         </td>
                     </tr>
                 </table>
@@ -316,8 +317,7 @@
                 <table id="mytable">
                     <tr>
                         <th>Technique</th>
-                        <th></th>
-                        <th>How did you use it?</th>
+                        <th colspan="2">How did you use it?</th>
                     </tr>
 
                     <tr>

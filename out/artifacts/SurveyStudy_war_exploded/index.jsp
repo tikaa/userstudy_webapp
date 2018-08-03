@@ -25,7 +25,7 @@
         Survey on Privacy Concerned Software Development
     </h2>
 
-    <img src="style/img/unsw_small_logo.png" width="350" height="200">
+    <img src="style/img/unsw_logo.jpg" width="350" height="200">
     <img src="style/img/data61_logo.jpg" width="350" height="200">
 
 </section>
@@ -33,14 +33,14 @@
     <div class="inner narrow">
         <header>
             <h2 class="head-last">
-                This survey is run by the University of New South Wales, Australia and Data61,
+                This survey is conducted by the University of New South Wales, Australia and Data61,
                 CSIRO (Commonwealth Scientific and Industrial Research Organisation), Australia.
             </h2></header>
     </div>
     <div class="container">
         <div class="row ">
 <h2>Information about the Study : </h2>
-    <p >This user study explores how you, as a developer, make your decisions to collect and store user
+    <p align="left">This user study explores how you, as a developer, make your decisions to collect and store user
         data when you design software applications as a software developer.
 
         You will be asked to perform simple tasks on selecting data items for a given application
@@ -56,7 +56,7 @@
     </br></br>
             <h2>Who Conduct the Study : </h2>
 
-    <p>The primary researcher of this project is Awanthika Senarath, who is currently a PhD research
+    <p align="left">The primary researcher of this project is Awanthika Senarath, who is currently a PhD research
         student at the University of New South Wales. The project is being supervised by Dr. Nalin Asanka Gamagedara Arachchilage
         and Dr. Marthie Grobler. If you have any concerns about the content or conduct of this study please contact
 
@@ -68,17 +68,17 @@
 
        </p>
             <h2>Risks Involved : </h2>
-<p>
+<p align="left">
     The risks involved in participating in this study are minimal. The study has already received approval from the ethics committee at both
     the University of New South Wales and Dat61, CSIRO, Australia. </p>
             <h2>Participation : </h2>
 
-            <p> If you are willing to participate please proceed by clicking the get started button below. By
+            <p align="left"> If you are willing to participate please proceed by clicking the get started button below. By
                 proceeding into the survey you give us consent to store and use the data you submit at the end of the survey.
                 You can stop and exit the survey at any point by closing the web page, in which case we will not
                 collect or store any data from you.
 
-            <p>Your participant ID :<%= request.getAttribute("id") %></p>
+            <p align="left">Your participant ID :<%= request.getAttribute("id") %></p>
         </div></div>
         </section>
             <section class="wrapper style2 special" id="two">
