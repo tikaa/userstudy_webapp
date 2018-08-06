@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -38,12 +39,21 @@
     }
 %>
 <script>
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     function validateForm() {
         var checked= [];
         var i = 0;
         <%String[] list = selectedDatalist;
             for (String s : list) {%>
-             var currId = "<%=s%>";
+             var currId = escapeHtml("<%=s%>");
              checked[i] = false;
             var elements = document.getElementsByName(currId);
              for(var elemN=0; elemN < elements.length; elemN++){
@@ -110,6 +120,9 @@
             <p>Sensitivity implies the impact of loss of data to the user. Some data may have a higher impact of loss to the user while the loss of some data may not be
             very critical for the user. Sensitivity measures this aspect of data.</p>
             <form id="form" action="set_visibility_page.jsp" onsubmit="return validateForm()" method="post" >
+                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                    String myToken = generateCSRFToken.generateCSRFToken();%>
+                <input type="hidden" name="_csrf" value="<%=myToken%>" />
                 <% for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
                         String currDataElemName = selectedDatalist[iterator];%>
             <table id="customers">

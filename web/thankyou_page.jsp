@@ -1,4 +1,5 @@
 <%@ page import="main.java.util.EmailSender" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -13,40 +14,40 @@
     <%
         StringBuffer evalParams = new StringBuffer();
         if (request.getParameter("better")!= null) {
-            evalParams.append("\n This method helped me to understand the data I use in the system design better. : " + Integer.parseInt(request.getParameter("better")));
+            evalParams.append("\n This method helped me to understand the data I use in the system design better. : " + request.getParameter("better"));
         }
         if(request.getParameter("interesting")!= null) {
-            evalParams.append("\n Understanding data is important for me to implement privacy in system designs. : "+ Integer.parseInt(request.getParameter("interesting")));
+            evalParams.append("\n Understanding data is important for me to implement privacy in system designs. : "+ request.getParameter("interesting"));
         }
         if(request.getParameter("quickly")!= null) {
-            evalParams.append("\n Understanding data helps me to make my decisions on data collection, sharing and storage better when I design the system. : " + Integer.parseInt(request.getParameter("quickly")));
+            evalParams.append("\n Understanding data helps me to make my decisions on data collection, sharing and storage better when I design the system. : " + request.getParameter("quickly"));
         }
         if(request.getParameter("informed")!= null) {
-            evalParams.append("\n Understanding data helps me to make my decisions on data collection, sharing and storage quickly when I design systems. : " + Integer.parseInt(request.getParameter("informed")));
+            evalParams.append("\n Understanding data helps me to make my decisions on data collection, sharing and storage quickly when I design systems. : " + request.getParameter("informed"));
         }
         if(request.getParameter("likely")!= null) {
-            evalParams.append("\n After following this process I am better informed about making decisions to protect user privacy in a system design. : " + Integer.parseInt(request.getParameter("likely")));
+            evalParams.append("\n After following this process I am better informed about making decisions to protect user privacy in a system design. : " + request.getParameter("likely"));
         }
-        if(request.getParameter("skills")!= null) {
-            evalParams.append("\n This model provides the required understanding of data for me to manage data and provide end user privacy in a software system design. : " + Integer.parseInt(request.getParameter("decisions")));
+        if(request.getParameter("decisions")!= null) {
+            evalParams.append("\n This model provides the required understanding of data for me to manage data and provide end user privacy in a software system design. : " + request.getParameter("decisions"));
         }
         if(request.getParameter("ease")!= null) {
-            evalParams.append("\n Understanding data makes my work easier when I implement privacy in system designs. : " + Integer.parseInt(request.getParameter("ease")));
+            evalParams.append("\n Understanding data makes my work easier when I implement privacy in system designs. : " + request.getParameter("ease"));
         }
         if(request.getParameter("enjoyable")!= null) {
-            evalParams.append("\n This method makes it easy for me to understand data. : " + Integer.parseInt(request.getParameter("enjoyable")));
+            evalParams.append("\n This method makes it easy for me to understand data. : " + request.getParameter("enjoyable"));
         }
         if(request.getParameter("clear")!= null) {
-            evalParams.append("\n Following this process was easy. : " + Integer.parseInt(request.getParameter("clear")));
+            evalParams.append("\n Following this process was easy. : " + request.getParameter("clear"));
         }
         if(request.getParameter("effort") != null) {
-            evalParams.append("\n Following this process was interesting. : " + Integer.parseInt(request.getParameter("effort")));
+            evalParams.append("\n Following this process was interesting. : " + request.getParameter("effort"));
         }
-        if(request.getParameter("decisions") != null) {
-            evalParams.append("\n I already have the necessary skills to follow this process. : " + Integer.parseInt(request.getParameter("skills")));
+        if(request.getParameter("skills") != null) {
+            evalParams.append("\n I already have the necessary skills to follow this process. : " + request.getParameter("skills"));
         }
         if(request.getParameter("use") != null) {
-            evalParams.append("\n If I'm provided with support I'm likely to use this model when I design systems. : " + Integer.parseInt(request.getParameter("use")));
+            evalParams.append("\n If I'm provided with support I'm likely to use this model when I design systems. : " + request.getParameter("use"));
         }
         StringBuffer sessionParams = new StringBuffer();
         sessionParams.append("Participant ID : " + session.getAttribute("currParticipant") + "\n \n");
@@ -190,6 +191,9 @@
         <div class="row ">
 
             <form name="last_form" action="final_page.jsp" onsubmit="return validateForm()" method="post">
+                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                    String myToken = generateCSRFToken.generateCSRFToken();%>
+                <input type="hidden" name="_csrf" value="<%=myToken%>" />
                 <table id="customers">
                     <tr>
                         <th>Your Age</th>

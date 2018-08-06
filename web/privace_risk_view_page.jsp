@@ -1,3 +1,4 @@
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -21,6 +22,9 @@
             </h2>
         </header>
             <form id="form" onsubmit="return myFunction()" method="post">
+                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                    String myToken = generateCSRFToken.generateCSRFToken();%>
+                <input type="hidden" name="_csrf" value="<%=myToken%>" />
             <table id="customers"><tr><th>Data Item</th><th>Privacy Risk</th></tr>
                 <% String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
                 StringBuffer privacyRiskVal = new StringBuffer();

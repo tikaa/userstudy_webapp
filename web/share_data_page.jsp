@@ -1,6 +1,7 @@
 <%@ page import="main.java.model.DataElement" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -10,13 +11,13 @@
     <link href="style/css/main.css" rel="stylesheet">
     <script>
         function validateForm() {
-            var checked=false;
+            var checked = false;
             var elements = document.getElementsByName("share");
-            for(var iterator=0; iterator <elements.length; iterator++){
+            for (var iterator = 0; iterator < elements.length; iterator++) {
                 var dataElem = elements[iterator].valueOf().value;
-                if(elements[iterator].checked) {
+                if (elements[iterator].checked) {
                     var howShare = document.forms["share_form"][dataElem + "howshare"].value;
-                     if (howShare == null || howShare == ""){
+                    if (howShare == null || howShare == "") {
                         alert("Please select how your design would share " + dataElem + "with third parties")
                         return false;
                     } else {
@@ -24,8 +25,7 @@
                     }
                 }
             }
-            if(!checked)
-            {
+            if (!checked) {
                 alert("If you do not want to share any data item, select the last option, I do not want to share data")
             }
             return checked;
@@ -60,11 +60,11 @@
                 storage_where_how.append("_" + String.valueOf(iterator) + "_" + currDataElement + "is_pre_stored_");
 //                currDataElement.setPreStored(true);
                 String parameterHow = request.getParameter(currDataElement + "how");
-                if (parameterHow != null && parameterHow != "" && !parameterHow.isEmpty() ) {
+                if (parameterHow != null && parameterHow != "" && !parameterHow.isEmpty()) {
                     storage_where_how.append("stored_as_" + parameterHow + "_");
                 }
                 String parameterWhere = request.getParameter(currDataElement + "where");
-                if ( parameterWhere != null && !parameterWhere.isEmpty()  && parameterWhere != "") {
+                if (parameterWhere != null && !parameterWhere.isEmpty() && parameterWhere != "") {
                     storage_where_how.append("stored_at_" + parameterWhere + "_");
                 }
             }
@@ -81,12 +81,13 @@
         <header>
             <h2 class="head-last">
                 Select the Data elements from an end user you would consider sharing (with other parties) for
-                the application scenario. Also state how you plan to share data (encrypted/ plain text/ anonymized etc.).
+                the application scenario. Also state how you plan to share data (encrypted/ plain text/ anonymized
+                etc.).
 
             </h2></header>
     </div>
 
-    <button id="show" class="button" >Show Application Scenario</button>
+    <button id="show" class="button">Show Application Scenario</button>
 
     <dialog id="window">
         <h3>Application Design Scenario</h3>
@@ -94,14 +95,17 @@
             This is a web-based health-care application that allows remote consultation with medical professionals,
             general practitioners and specialists, for a payment. Users should be able to browse through a registered
             list of medical professionals and chat (text/video) with them on their health problems for advice.
-            Doctors and health-care professionals can register on the application to earn by providing their expertise to users.
+            Doctors and health-care professionals can register on the application to earn by providing their expertise
+            to users.
             The application is to be freely available on-line (desktop/mobile). You can decide on,
 
         <li align="left">
             Collect user data and use them within the application to provide users with enhanced features
-        </li><li align="left">
-        Share data with third parties (hospitals, insurance providers and other health care providers) to gain profit from data.
-    </li>
+        </li>
+        <li align="left">
+            Share data with third parties (hospitals, insurance providers and other health care providers) to gain
+            profit from data.
+        </li>
         <li align="left">
             Store and keep user data for future use.
         </li>
@@ -110,43 +114,52 @@
     </dialog>
     <script>
 
-        (function() {
+        (function () {
             var dialog = document.getElementById('window');
-            document.getElementById('show').onclick = function() {
+            document.getElementById('show').onclick = function () {
                 dialog.show();
             };
-            document.getElementById('exit').onclick = function() {
+            document.getElementById('exit').onclick = function () {
                 dialog.close();
             };
         })();
     </script>
     <div class="container">
         <div class="row ">
-                    <table id="customers">
-                        <tr>
-                            <th>Data Element</th>
-                            <th> Share? </th>
-                            <th>How you share</th>
+            <table id="customers">
+                <tr>
+                    <th>Data Element</th>
+                    <th> Share?</th>
+                    <th>How you share</th>
 
-                        </tr>
-                        <FORM NAME="share_form" ACTION="set_sensitivity_page.jsp" METHOD="post" onsubmit="return validateForm()">
-                                <%
-
+                </tr>
+                <FORM NAME="share_form" ACTION="set_sensitivity_page.jsp" METHOD="post"
+                      onsubmit="return validateForm()">
+                        <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                String myToken = generateCSRFToken.generateCSRFToken();%>
+                    <input type="hidden" name="_csrf" value="<%=myToken%>"/>
+                        <%
                             for (int i =0; i<selectedDatalist.length; i++) {
                             String dataName = selectedDatalist[i];
                             String howShare = dataName + "howshare";
 
                         %>
-                            <tr> <td><%=dataName %></td>
-                                <td> <INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=dataName %> ></td>
+                    <tr>
+                        <td><%=dataName %>
+                        </td>
+                        <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=dataName %>></td>
 
-                                <td> <input type="text" name=<%=howShare %>  ></td>
-                                <%}%>
-                    <tr><td colspan="2">  I do not want to share any data in this app </td><td><INPUT TYPE="CHECKBOX" NAME="share" VALUE="no share" ></td></tr></table>
-                    <INPUT TYPE="SUBMIT" class="button" style="vertical-align:middle" VALUE="Continue >>">
-                </FORM>
-            </div>
+                        <td><input type="text" name=<%=howShare %>></td>
+                            <%}%>
+                    <tr>
+                        <td colspan="2"> I do not want to share any data in this app</td>
+                        <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE="no share"></td>
+                    </tr>
+            </table>
+            <INPUT TYPE="SUBMIT" class="button" style="vertical-align:middle" VALUE="Continue >>">
+            </FORM>
         </div>
+    </div>
 </section>
 <br><br>
 

@@ -14,13 +14,13 @@
     <%
         StringBuffer evalParams = new StringBuffer();
         if (request.getParameter("age")!= null) {
-            evalParams.append("\n Participant's age" + Integer.parseInt(request.getParameter("age")));
+            evalParams.append("\n Participant's age" + request.getParameter("age"));
         } if (request.getParameter("gender")!= null) {
-            evalParams.append("\n Participant's gender" + Integer.parseInt(request.getParameter("gender")));
+            evalParams.append("\n Participant's gender" + request.getParameter("gender"));
         } if (request.getParameter("occupation")!= null) {
-            evalParams.append("\n Participant's occupation" + Integer.parseInt(request.getParameter("occupation")));
+            evalParams.append("\n Participant's occupation" + request.getParameter("occupation"));
         } if (request.getParameter("experience")!= null) {
-            evalParams.append("\n Participant's experience" + Integer.parseInt(request.getParameter("experience")));
+            evalParams.append("\n Participant's experience" + request.getParameter("experience"));
         }
         StringBuffer techUsed = new StringBuffer();
         techUsed.append("\n Techniques Used by the Participant \n"

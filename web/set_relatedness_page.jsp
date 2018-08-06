@@ -1,3 +1,4 @@
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -8,12 +9,22 @@
     <link href="style/css/main.css" rel="stylesheet">
 
     <script>
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
         function validateForm() {
             var checked= [];
             var i = 0;
             <%String[] list = session.getAttribute("selectedData").toString().split(",");
                 for (String s : list) {%>
-            var currId = "<%=s%>";
+            var currId = escapeHtml("<%=s%>");
             checked[i] = false;
             var elements = document.getElementsByName(currId);
             for(var elemN=0; elemN < elements.length; elemN++){
@@ -93,6 +104,9 @@
             the credit card number for a payment portal. Less related data are data used to enhance the system functionality or data that is used with the hope of giving more functioanlity
             in the future.</p>
             <form id="form" action="privace_risk_view_page.jsp" onsubmit="return validateForm()" method="post">
+                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                    String myToken = generateCSRFToken.generateCSRFToken();%>
+                <input type="hidden" name="_csrf" value="<%=myToken%>" />
             <%
                 for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
                     String currDataElemName = selectedDatalist[iterator];

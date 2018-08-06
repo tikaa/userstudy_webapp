@@ -1,3 +1,4 @@
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -106,7 +107,9 @@
                     <th>Where to Store</th>
                 </tr>
                 <FORM name = "share_form" ACTION="share_data_page.jsp" METHOD="post" onsubmit="return validateForm()">
-
+                        <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                String myToken = generateCSRFToken.generateCSRFToken();%>
+                    <input type="hidden" name="_csrf" value="<%=myToken%>" />
                         <%
                         for (int val =0; val<selectedDatalist.length; val++) {
                             String dataName = selectedDatalist[val];

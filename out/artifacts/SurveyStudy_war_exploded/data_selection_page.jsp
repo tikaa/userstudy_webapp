@@ -1,4 +1,5 @@
 <%@ page import="main.java.model.DataItems" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -9,7 +10,6 @@
     <script>
         function validateForm() {
             var checked = false;
-            var selectedItems = "";
             var elements = document.getElementsByName("check");
             for (var i = 0; i < elements.length; i++) {
                 if (elements[i].checked) {
@@ -69,8 +69,12 @@
                 };
             })();
         </script>
+
         <FORM name="selectionform" ACTION="purpose_identification_page.jsp" METHOD="post"
               onsubmit="return validateForm()">
+            <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                String myToken = generateCSRFToken.generateCSRFToken();%>
+            <input type="hidden" name="_csrf" value="<%=myToken%>" />
             <table id="customers">
                 <tr>
                     <th>Data Item</th>

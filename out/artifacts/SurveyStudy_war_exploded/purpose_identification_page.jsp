@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -31,10 +32,19 @@
         }
     %>
     <script>
+
+        function escapeHtml(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
         function validateForm() {
             <%String list[] = selectedDataJson.toString().split(",");
             for (String s : list) {%>
-            var currId = "<%=s%>";
+            var currId = escapeHtml("<%=s%>");
             var x = document.forms["purposeForm"][currId + "purpose"].value;
                 if (x == "") {
                 alert("Purpose for using the data item " + currId + " must be filled out");
@@ -99,13 +109,16 @@
                     })();
                 </script>
                 <FORM name="purposeForm" ACTION="store_data_page.jsp" METHOD="post" onsubmit="return validateForm()">
+                        <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                String myToken = generateCSRFToken.generateCSRFToken();%>
+                    <input type="hidden" name="_csrf" value="<%=myToken%>" />
                 <%String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
                      for (int val =0; val<selectedDatalist.length; val++) {
                         String dataName = selectedDatalist[val];
                         String purpose = dataName + "purpose";
                     %>
                     <tr>
-                        <td><%=dataName %>
+                        <td>"<%= dataName %>
                         </td>
                         <td><input type="text" name=<%=purpose %>></td>
                     </tr>

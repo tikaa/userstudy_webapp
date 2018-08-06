@@ -12,7 +12,8 @@ public class DataStorer {
 
     public void fileWriter(String fileName, String content) {
         List<String> lines = Arrays.asList("submission from Participant : " + fileName, content);
-        Path file = Paths.get( "\\sr\\/webapps\\survey2018unsw.csiro.au\\" + fileName + ".txt");
+        Path file = Paths.get( "\\sr\\webapps\\survey2018unsw.csiro.au\\" + fileName + ".txt"); //for server deployment
+//      Path file = Paths.get( "C:\\Users\\Awanthika\\Desktop\\" + fileName + ".txt"); // for local testing
         try {
             Files.write(file, lines, Charset.forName("UTF-8"));
             System.out.println("content written to file" + file.getFileName() + " for participant : " + fileName);

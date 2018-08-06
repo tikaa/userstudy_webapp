@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="main.java.util.GenerateCSRFToken" %>
 <html>
 <head>
     <title>User Study - University of New South Wales</title>
@@ -168,31 +169,34 @@
                 Share you thoughts on the process you followed to understand the privacy risk of data elements.
             </h2></header>
         <form id="form" action="thankyou_page.jsp" onsubmit="return validateForm()" method="post">
+            <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
+                String myToken = generateCSRFToken.generateCSRFToken();%>
+            <input type="hidden" name="_csrf" value="<%=myToken%>" />
             <table id="customers">
                 <tr>
                     <th>This method helped me to understand the data I use in the system design better.</th>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="better"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="better"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="better"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="better"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
@@ -201,25 +205,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="interesting"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="interesting"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="interesting"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="interesting"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
@@ -259,25 +263,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="informed"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="informed"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="informed"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="informed"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
@@ -288,25 +292,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="likely"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="likely"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="likely"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="likely"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
@@ -319,25 +323,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="decisions"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="decisions"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="decisions"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="decisions"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
@@ -347,25 +351,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="ease"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="ease"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="ease"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="ease"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
@@ -375,53 +379,53 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="enjoyable"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="enjoyable"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="enjoyable"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="enjoyable"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
                 <tr>
-                    <th>Following this process was difficult.
+                    <th>Following this process was easy.
                     </th>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="clear"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="clear"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="clear"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="clear"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
@@ -430,25 +434,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="effort"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="effort"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="effort"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="better"
+                        <input type="radio" name="effort"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
@@ -457,25 +461,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="skills"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="skills"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="skills"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="skills"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>
@@ -484,25 +488,25 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="use"
                                value="Strongly Agree"/> Strongly Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="use"
                                value="Somewhat Agree"/> Somewhat Agree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="use"
                                value="Somewhat Disagree"/> Somewhat Disagree
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" name="quickly"
+                        <input type="radio" name="use"
                                value="Strongly Disagree"/> Strongly Disagree
                     </td>
                 </tr>

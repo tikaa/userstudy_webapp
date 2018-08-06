@@ -21,7 +21,6 @@
 
     %>;
 
-
 </head>
 <body class="">
 <!--begining of new css-->

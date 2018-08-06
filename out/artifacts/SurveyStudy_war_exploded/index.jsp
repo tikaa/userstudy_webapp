@@ -1,4 +1,5 @@
 <%@ page import="main.java.loginMgt.ParticipantIDGene" %>
+<%@ page import="main.java.util.EmailAddresses" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <html>
@@ -13,8 +14,12 @@
 
         //response.sendRedirect("data_selection_page.jsp");
         session.setAttribute("currParticipant", participantID);
-    %>;
 
+        EmailAddresses emailAddresses = new EmailAddresses();
+        String nalin_email = emailAddresses.getNalin_email();
+        String marthie_email = emailAddresses.getMarthie_email();
+
+    %>;
 
 </head>
 <body class="">
@@ -60,8 +65,8 @@
         student at the University of New South Wales. The project is being supervised by Dr. Nalin Asanka Gamagedara Arachchilage
         and Dr. Marthie Grobler. If you have any concerns about the content or conduct of this study please contact
 
-        Dr. Nalin Asanka G.A via nalin.asanka@adfa.edu.au. Or
-        Dr. Marthie Grobler via marthie.grobler@data61.csiro.au
+        Dr. Nalin Asanka G.A via <%=nalin_email%> Or
+        Dr. Marthie Grobler via <%=marthie_email%>
 
         The results of this study will be written up as research papers (published in scientific journals and conferences) and also included in a PhD research
         thesis.
