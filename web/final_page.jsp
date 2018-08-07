@@ -1,6 +1,3 @@
-<%@ page import="main.java.util.EmailSender" %>
-<%@ page import="java.util.Arrays" %>
-<%@ page import="java.util.List" %>
 <%@ page import="main.java.util.DataStorer" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 

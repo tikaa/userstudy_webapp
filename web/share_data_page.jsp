@@ -1,4 +1,5 @@
-<%@ page import="main.java.model.DataElement" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
@@ -145,11 +146,11 @@
 
                         %>
                     <tr>
-                        <td><%=dataName %>
+                        <td><%=Encode.forHtml(dataName) %>
                         </td>
-                        <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=dataName %>></td>
+                        <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
 
-                        <td><input type="text" name=<%=howShare %>></td>
+                        <td><input type="text" name=<%=Encode.forHtmlAttribute(howShare) %>></td>
                             <%}%>
                     <tr>
                         <td colspan="2"> I do not want to share any data in this app</td>

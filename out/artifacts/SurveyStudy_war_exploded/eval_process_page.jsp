@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
 <html>
 <head>

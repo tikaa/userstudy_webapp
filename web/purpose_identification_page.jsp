@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -33,18 +34,11 @@
     %>
     <script>
 
-        function escapeHtml(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
-        }
+
         function validateForm() {
             <%String list[] = selectedDataJson.toString().split(",");
             for (String s : list) {%>
-            var currId = escapeHtml("<%=s%>");
+            var currId = "<%=Encode.forJavaScript(s)%>";
             var x = document.forms["purposeForm"][currId + "purpose"].value;
                 if (x == "") {
                 alert("Purpose for using the data item " + currId + " must be filled out");
@@ -118,9 +112,9 @@
                         String purpose = dataName + "purpose";
                     %>
                     <tr>
-                        <td><%= dataName %>
+                        <td><%= Encode.forHtml(dataName)%>
                         </td>
-                        <td><input type="text" name=<%=purpose %>></td>
+                        <td><input type="text" name=<%=Encode.forHtmlAttribute(purpose) %>></td>
                     </tr>
                     <%}%>
             </table>

@@ -1,4 +1,3 @@
-<%@ page import="main.java.util.EmailSender" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 

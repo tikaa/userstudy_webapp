@@ -1,4 +1,5 @@
 <%@ page import="main.java.util.GenerateCSRFToken" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -117,12 +118,12 @@
                             String whereStore = dataName + "where";
                         %>
                     <tr>
-                        <td><%=dataName %>
+                        <td><%=Encode.forHtml(dataName) %>
                         </td>
-                        <td><INPUT TYPE="CHECKBOX" NAME="store" VALUE=<%=dataName %>></td>
+                        <td><INPUT TYPE="CHECKBOX" NAME="store" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
 
-                        <td><input type="text" name=<%=howStore %>></td>
-                        <td><input type="text" name=<%=whereStore%>></td>
+                        <td><input type="text" name=<%=Encode.forHtmlAttribute(howStore) %>></td>
+                        <td><input type="text" name=<%=Encode.forHtmlAttribute(whereStore)%>></td>
                     </tr>
                         <%}%>
                             <tr><td colspan="3">I do not want to store any data item in the application </td> <td> <INPUT TYPE="CHECKBOX" NAME="store" VALUE="noData"></td></tr>

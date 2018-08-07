@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -127,15 +128,15 @@
                         String currDataElemName = selectedDatalist[iterator];%>
             <table id="customers">
                <tr><th>
-                <%= currDataElemName%>
+                <%= Encode.forHtml(currDataElemName)%>
                 </th></tr>
                 <tr><td>
 
-                    <input type="radio" name=<%= currDataElemName%>
+                    <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                             value="3"/> Highly Sensitive
-                    <input type="radio" name=<%= currDataElemName%>
+                    <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                             value="2"/> Somewhat Sensitive
-                    <input type="radio" name=<%= currDataElemName%>
+                    <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                             value="1"/> Not at all Sensitive </td></tr>
                     <%
                         }

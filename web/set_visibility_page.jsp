@@ -1,4 +1,5 @@
-<%@ page import="main.java.util.GenerateCSRFToken" %><%--
+<%@ page import="main.java.util.GenerateCSRFToken" %>
+<%@ page import="org.owasp.encoder.Encode" %><%--
   Created by IntelliJ IDEA.
   User: Asus PC
   Date: 1/10/2017
@@ -123,16 +124,16 @@
                 <table id="customers">
                     <tr>
                         <th>
-                            <%=currDataElemName %>
+                            <%=Encode.forHtml(currDataElemName) %>
                         </th>
                     </tr>
                     <tr>
                         <td>
-                            <input type="radio" name=<%= currDataElemName%>
+                            <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                                     value="3"/> Highly Visible
-                            <input type="radio" name=<%= currDataElemName%>
+                            <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                                     value="2"/> Somewhat Visible
-                            <input type="radio" name=<%= currDataElemName%>
+                            <input type="radio" name=<%= Encode.forHtmlAttribute(currDataElemName)%>
                                     value="1"/> Not at all Visible
                         </td>
                     </tr>

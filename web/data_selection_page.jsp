@@ -1,5 +1,6 @@
 <%@ page import="main.java.model.DataItems" %>
 <%@ page import="main.java.util.GenerateCSRFToken" %>
+<%@ page import="org.owasp.encoder.Encode" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -85,9 +86,9 @@
                         String dataName = dataElem.toString();
                 %>
                 <tr>
-                    <td><%=dataName %>
+                    <td><%=Encode.forHtml(dataName) %>
                     </td>
-                    <td><INPUT TYPE="CHECKBOX" NAME="check" VALUE=<%=dataName %>>
+                    <td><INPUT TYPE="CHECKBOX" NAME="check" VALUE=<%=Encode.forHtmlAttribute(dataName) %>>
 
                 </tr>
                 <%}%>

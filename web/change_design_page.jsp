@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
+<%@ page import="org.owasp.encoder.Encode" %>
 <html>
 <head>
     <title>User Study - University of New South Wales</title>
@@ -46,15 +46,15 @@
                         float privacyRisk = Float.parseFloat(session.getAttribute(selectedDatalist[i]+"privacyRisk").toString());
                     %>
                         <tr>
-                            <td><%=dataName %><br>
+                            <td><%=Encode.forHtml(dataName) %><br>
                             </td>
-                            <td><%=privacyRisk%><br>
+                            <td><%=Encode.forHtml(String.valueOf(privacyRisk))%><br>
                             </td>
-                            <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=dataName %>></td>
-                            <td><input type="text" name=<%=howShare %>></td>
-                            <td><INPUT TYPE="CHECKBOX" NAME="store" VALUE=<%=dataName %>></td>
-                            <td><input type="text" name=<%=howStore %>></td>
-                            <td><input type="text" name=<%=whereStore %>></td>
+                            <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
+                            <td><input type="text" name=<%=Encode.forHtmlAttribute(howShare) %>></td>
+                            <td><INPUT TYPE="CHECKBOX" NAME="store" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
+                            <td><input type="text" name=<%=Encode.forHtmlAttribute(howStore) %>></td>
+                            <td><input type="text" name=<%=Encode.forHtmlAttribute(whereStore) %>></td>
                         </tr>
                             <%}%>
                 </table>
