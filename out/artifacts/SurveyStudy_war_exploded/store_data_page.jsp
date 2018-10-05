@@ -1,29 +1,90 @@
-<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page import="org.owasp.encoder.Encode" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Arrays" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/javascript" language="JavaScript" src="esapi4js/esapi.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/esapi-compressed.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/Base.esapi.properties.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/ESAPI_Standard_en_US.properties.js"></script>
 <html>
 <head>
     <title>User Study - University of New South Wales</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
+    <%
+        String sessionToken = session.getAttribute("csrf_token").toString();
+        String formSubmittedToken = request.getParameter("_csrf");
+        if (!sessionToken.equals(formSubmittedToken)) {
+            session.invalidate();
+            String redirectURL = "error_page.jsp";
+            response.sendRedirect(redirectURL);
+        }
+    %>
+    <%
+        String[] selectVals = request.getParameterValues("check");
+        String moreDataVals = Encode.forHtmlAttribute(request.getParameter("anydata")).replaceAll(" ", "");
+        List moreDataList = null;
+        if (moreDataVals != null && moreDataVals != "") {
 
+            String[] moreData = moreDataVals.split(",");
+            moreDataList = Arrays.asList(moreData);
+
+        }
+        List selectList = null;
+        StringBuffer selectDataJson = new StringBuffer();
+        selectDataJson.append("[");
+        StringBuffer selectedDataJson = new StringBuffer();
+        if (true) {
+            if (selectVals != null) {
+                selectList = Arrays.asList(selectVals);
+
+                for (int i = 0; i < selectList.size(); i++) {
+                    selectedDataJson.append(String.valueOf(selectList.get(i)));
+                    if (i < selectList.size() - 1) {
+                        selectedDataJson.append(",");
+                    }
+
+                }
+            }
+            if (moreDataList != null) {
+                if (selectVals != null) {
+                    selectedDataJson.append(",");
+                }
+                for (int i = 0; i < moreDataList.size(); i++) {
+                    if (moreDataList.get(i) != null && moreDataList.get(i) != "") {
+                        selectedDataJson.append(moreDataList.get(i));
+                        if (i < moreDataList.size() - 1) {
+                            selectedDataJson.append(",");
+                        }
+                    }
+                }
+            }
+            selectDataJson.append(selectedDataJson + "]");
+            session.setAttribute("selectedData", selectedDataJson.toString());
+            session.setAttribute("selectedDataListObject", selectDataJson);
+
+        }
+
+
+    %>
     <script>
+        org.owasp.esapi.ESAPI.initialize();
         function validateForm() {
             var checked=false;
             var elements = document.getElementsByName("store");
             for(var iterator=0; iterator <elements.length; iterator++){
                 var dataElem = elements[iterator].valueOf().value;
                 if(elements[iterator].checked) {
-                    var whereStore = document.forms["share_form"][dataElem + "where"].value;
-                    var howStore = document.forms["share_form"][dataElem + "how"].value;
+                    var whereStore = document.forms["share_form"][dataElem + "where"].value
+                    var howStore = document.forms["share_form"][dataElem + "how"].value
 
                     if(howStore == null || howStore == "") {
-                        alert("Please select how you want to store " + dataElem)
+                       showError("Please select how you want to store " + dataElem);
                         return false;
 
                     } else if (whereStore == null || whereStore == ""){
-                        alert("Please select where you want to store " + dataElem)
+                        showError("Please select where you want to store " + dataElem);
                         return false;
                     } else {
                         checked = true;
@@ -32,9 +93,18 @@
             }
             if(!checked)
             {
-                alert("If you do not want to store any data item, select the last option, I do not want to store data")
+                showError("If you do not want to store any data item, select the last option, I do not want to store data");
             }
             return checked;
+        }
+
+        function showError(errorMessage){
+            document.getElementById("alertMessage").innerHTML = errorMessage;
+            var alertBox =document.getElementById("notification");
+            alertBox.show();
+            document.getElementById('close').onclick = function () {
+                alertBox.close();
+            }
         }
     </script>
     <script language="javascript" type="text/javascript">
@@ -47,7 +117,7 @@
     String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
     StringBuffer purposeNamePair = new StringBuffer();
     for ( int i = 0 ; i <selectedDatalist.length; i++) {
-        purposeNamePair.append(selectedDatalist[i] + "_" + request.getParameter(selectedDatalist[i] + "purpose"));
+        purposeNamePair.append(selectedDatalist[i] + "_" + Encode.forHtmlAttribute(request.getParameter(selectedDatalist[i] + "purpose")));
         if (i < selectedDatalist.length - 1) {
             purposeNamePair.append(", \n");
         }
@@ -58,9 +128,9 @@
     <div class="inner narrow">
         <header>
             <h2 class="head-last">
-                Select the Data elements from an end user you would consider storing, where you store data (third party
+                Select the Data elements from an end user that you would consider storing, and decide where would you store these data (third party
                 database, cloud, user's
-                device) and how you store data (anonymized, aggregated, encrypted etc. )
+                device) and how would you store these data (anonymized, aggregated, encrypted etc. )
             </h2></header>
     </div>
 
@@ -86,6 +156,10 @@
         </p>
         <button id="exit">Close Dialog</button>
     </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
+    </dialog>
     <script>
 
         (function() {
@@ -107,10 +181,8 @@
                     <th>How to Store</th>
                     <th>Where to Store</th>
                 </tr>
-                <FORM name = "share_form" ACTION="share_data_page.jsp" METHOD="post" onsubmit="return validateForm()">
-                        <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
-                String myToken = generateCSRFToken.generateCSRFToken();%>
-                    <input type="hidden" name="_csrf" value="<%=myToken%>" />
+                <FORM id = "share_form" name= "share_form" ACTION="share_data_page.jsp" METHOD="post" onsubmit="return validateForm()">
+                    <input type="hidden" name="_csrf" value="<%=sessionToken%>" />
                         <%
                         for (int val =0; val<selectedDatalist.length; val++) {
                             String dataName = selectedDatalist[val];
@@ -122,8 +194,8 @@
                         </td>
                         <td><INPUT TYPE="CHECKBOX" NAME="store" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
 
-                        <td><input type="text" name=<%=Encode.forHtmlAttribute(howStore) %>></td>
-                        <td><input type="text" name=<%=Encode.forHtmlAttribute(whereStore)%>></td>
+                        <td><input type="text" name="<%=Encode.forHtmlAttribute(howStore) %>"></td>
+                        <td><input type="text" name="<%=Encode.forHtmlAttribute(whereStore)%>"></td>
                     </tr>
                         <%}%>
                             <tr><td colspan="3">I do not want to store any data item in the application </td> <td> <INPUT TYPE="CHECKBOX" NAME="store" VALUE="noData"></td></tr>
@@ -138,6 +210,8 @@
     </div>
 </section>
 <br><br>
-
+<div id="footer" style="align-content: center">
+    page 04
+</div>
 </body>
 </html>

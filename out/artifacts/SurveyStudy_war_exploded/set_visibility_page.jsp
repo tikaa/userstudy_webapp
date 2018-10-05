@@ -1,4 +1,3 @@
-<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page import="org.owasp.encoder.Encode" %><%--
   Created by IntelliJ IDEA.
   User: Asus PC
@@ -13,23 +12,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
-    <script>
-
-        function escapeHtml(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
+    <%
+        String sessionToken = session.getAttribute("csrf_token").toString();
+        String formSubmittedToken = request.getParameter("_csrf");
+        if(!sessionToken.equals(formSubmittedToken)) {
+            session.invalidate();
+            String redirectURL = "error_page.jsp";
+            response.sendRedirect(redirectURL);
         }
-
+    %>
+    <script>
         function validateForm() {
             var checked = [];
             var i = 0;
             <%String[] list = session.getAttribute("selectedData").toString().split(",");
                 for (String s : list) {%>
-            var currId = escapeHtml("<%=s%>");
+            var currId = "<%=Encode.forJavaScript(s).replaceAll(" ","")%>";
             checked[i] = false;
             var elements = document.getElementsByName(currId);
             for (var elemN = 0; elemN < elements.length; elemN++) {
@@ -41,11 +39,19 @@
             <%}%>
             for (var val in checked) {
                 if (checked[val] != true) {
-                    alert('Please set visibility value for all data elements');
+                    showError('Please set visibility value for all data elements');
                     return false;
                 }
             }
             return true;
+        }
+        function showError(errorMessage){
+            document.getElementById("alertMessage").innerHTML = errorMessage;
+            var alertBox =document.getElementById("notification");
+            alertBox.show();
+            document.getElementById('close').onclick = function () {
+                alertBox.close();
+            }
         }
     </script>
     <script language="javascript" type="text/javascript">
@@ -57,7 +63,7 @@
     <div class="inner narrow">
         <header>
             <h2 class="head-last">
-                How visible do you intend to make the data you decided to collect in the application design?
+                Step II : As the second step of the model determine how visible do you intend to make the data you decided to collect in the application design.
             </h2></header>
     </div>
     <button id="show" class="button">Show Application Scenario</button>
@@ -85,6 +91,10 @@
         </p>
         <button id="exit">Close Dialog</button>
     </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
+    </dialog>
     <script>
 
         (function () {
@@ -106,18 +116,23 @@
                 }
             %>
 
-            <p>Visibility implies how visible the data is by default in the application when the user reveal the data
+            <p>Visibility is how visible the data is by default in the application when the user give data
                 into the application.
                 That is, you may design the application so that the data the user disclose will be visible in the app
                 for other users, for the organization that developed the application (higher visibility), or, you could
                 design the application
-                so that the data the user disclose is only visible to the user himself which is very low visibility.</p>
+                so that the data the user disclose is only visible to the user himself (which is very low visibility).
+            </p>
+
+            <p>
+
+            For example, the name and the profile pic in facebook have the highest visibility as any user in the system can see these information
+            about another user by default. However, the bank account number in a banking application has low visibility as only the user
+            himself can view it in the application.</p>
 
 
             <form id="form" action="set_relatedness_page.jsp" onsubmit="return validateForm()" method="post">
-                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
-                    String myToken = generateCSRFToken.generateCSRFToken();%>
-                <input type="hidden" name="_csrf" value="<%=myToken%>" />
+                <input type="hidden" name="_csrf" value="<%=sessionToken%>" />
                 <%
                     for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
                         String currDataElemName = selectedDatalist[iterator];%>
@@ -148,6 +163,8 @@
         </div>
     </div>
 </section>
-
+<div id="footer" style="align-content: center">
+    page 07
+</div>
 </body>
 </html>

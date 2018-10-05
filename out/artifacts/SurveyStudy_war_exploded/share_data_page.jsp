@@ -2,24 +2,39 @@
 <%@ page import="org.owasp.encoder.Encode" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
-<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<script type="text/javascript" language="JavaScript" src="esapi4js/esapi.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/esapi-compressed.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/Base.esapi.properties.js"></script>
+<script type="text/javascript" language="JavaScript" src="esapi4js/ESAPI_Standard_en_US.properties.js"></script>
+
 <html>
 <head>
     <title>User Study - University of New South Wales</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
+    <%
+        String sessionToken = session.getAttribute("csrf_token").toString();
+        String formSubmittedToken = request.getParameter("_csrf");
+        if(!sessionToken.equals(formSubmittedToken)) {
+            session.invalidate();
+            String redirectURL = "error_page.jsp";
+            response.sendRedirect(redirectURL);
+        }
+    %>
     <script>
+        org.owasp.esapi.ESAPI.initialize();
         function validateForm() {
+
             var checked = false;
             var elements = document.getElementsByName("share");
             for (var iterator = 0; iterator < elements.length; iterator++) {
-                var dataElem = elements[iterator].valueOf().value;
+                var dataElem = elements[iterator].valueOf().value
                 if (elements[iterator].checked) {
-                    var howShare = document.forms["share_form"][dataElem + "howshare"].value;
+                    var howShare = document.forms["share_form"][dataElem + "howshare"].value
                     if (howShare == null || howShare == "") {
-                        alert("Please select how your design would share " + dataElem + "with third parties")
+                        showError("Please select how your design would share " + dataElem + "with third parties")
                         return false;
                     } else {
                         checked = true;
@@ -27,9 +42,18 @@
                 }
             }
             if (!checked) {
-                alert("If you do not want to share any data item, select the last option, I do not want to share data")
+                showError("If you do not want to share any data item, select the last option, I do not want to share data")
             }
             return checked;
+        }
+
+        function showError(errorMessage) {
+            document.getElementById("alertMessage").innerHTML = errorMessage;
+            var alertBox =document.getElementById("notification");
+            alertBox.show();
+            document.getElementById('close').onclick = function () {
+                alertBox.close();
+            }
         }
     </script>
     <script language="javascript" type="text/javascript">
@@ -38,14 +62,6 @@
 </head>
 <body onload="noBack();"
       onpageshow="if (event.persisted) noBack();" onunload="">
-
-
-<%!
-    boolean myFunction() {
-        return true;
-    }
-
-%>
 
 <%
     String[] storeVals = request.getParameterValues("store");
@@ -58,15 +74,15 @@
             String currDataElement = selectedDatalist[iterator];
             if (storeList.contains(selectedDatalist[iterator])) {
 
-                storage_where_how.append("_" + String.valueOf(iterator) + "_" + currDataElement + "is_pre_stored_");
+                storage_where_how.append("_" + currDataElement);
 //                currDataElement.setPreStored(true);
                 String parameterHow = request.getParameter(currDataElement + "how");
                 if (parameterHow != null && parameterHow != "" && !parameterHow.isEmpty()) {
-                    storage_where_how.append("stored_as_" + parameterHow + "_");
+                    storage_where_how.append("_stored" + parameterHow + "_");
                 }
                 String parameterWhere = request.getParameter(currDataElement + "where");
                 if (parameterWhere != null && !parameterWhere.isEmpty() && parameterWhere != "") {
-                    storage_where_how.append("stored_at_" + parameterWhere + "_");
+                    storage_where_how.append("at_" + parameterWhere + "_");
                 }
             }
 
@@ -81,7 +97,7 @@
     <div class="inner narrow">
         <header>
             <h2 class="head-last">
-                Select the Data elements from an end user you would consider sharing (with other parties) for
+                Select the Data elements from an end user that you would consider sharing (with other parties) for
                 the application scenario. Also state how you plan to share data (encrypted/ plain text/ anonymized
                 etc.).
 
@@ -113,6 +129,10 @@
         </p>
         <button id="exit">Close Dialog</button>
     </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
+    </dialog>
     <script>
 
         (function () {
@@ -134,11 +154,9 @@
                     <th>How you share</th>
 
                 </tr>
-                <FORM NAME="share_form" ACTION="set_sensitivity_page.jsp" METHOD="post"
+                <FORM id="share_form" ACTION="model_intro_page.jsp" METHOD="post"
                       onsubmit="return validateForm()">
-                        <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
-                String myToken = generateCSRFToken.generateCSRFToken();%>
-                    <input type="hidden" name="_csrf" value="<%=myToken%>"/>
+                    <input type="hidden" name="_csrf" value="<%=sessionToken%>"/>
                         <%
                             for (int i =0; i<selectedDatalist.length; i++) {
                             String dataName = selectedDatalist[i];
@@ -150,7 +168,7 @@
                         </td>
                         <td><INPUT TYPE="CHECKBOX" NAME="share" VALUE=<%=Encode.forHtmlAttribute(dataName) %>></td>
 
-                        <td><input type="text" name=<%=Encode.forHtmlAttribute(howShare) %>></td>
+                        <td><input type="text" name="<%=Encode.forHtmlAttribute(howShare) %>"></td>
                             <%}%>
                     <tr>
                         <td colspan="2"> I do not want to share any data in this app</td>
@@ -163,6 +181,8 @@
     </div>
 </section>
 <br><br>
-
+<div id="footer" style="align-content: center">
+    page 05
+</div>
 </body>
 </html>

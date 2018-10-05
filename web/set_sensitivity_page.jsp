@@ -1,7 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Arrays" %>
 <%@ page import="org.owasp.encoder.Encode" %>
-<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,45 +15,19 @@
 <body onload="noBack();"
       onpageshow="if (event.persisted) noBack();" onunload="">
 <%
+    String sessionToken = session.getAttribute("csrf_token").toString();
     String[] selectedDatalist = session.getAttribute("selectedData").toString().split(",");
-    String[] storeVals = request.getParameterValues("share");
-    StringBuffer share_how = new StringBuffer();
-    if (storeVals != null) {
-        List storeList = Arrays.asList(storeVals);
-
-        for (int i = 0; i < selectedDatalist.length; i++) {
-            String currDataElement = selectedDatalist[i];
-            if (storeList.contains(currDataElement)) {
-                share_how.append("_" + String.valueOf(i) + "_" + currDataElement);
-                share_how.append("_" + "isPreShared");
-                String parameterHow = request.getParameter(currDataElement+ "howshare");
-                if (parameterHow != null && !parameterHow.isEmpty() && parameterHow != "") {
-                    share_how.append("_" + "howPreshared" + "_" + parameterHow);
-                }
-
-            }
-
-        }
-        session.setAttribute("share_how", share_how.toString());
-
-    }
 %>
 <script>
-    function escapeHtml(unsafe) {
-        return unsafe
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-    }
+
 
     function validateForm() {
         var checked= [];
         var i = 0;
         <%String[] list = selectedDatalist;
             for (String s : list) {%>
-             var currId = escapeHtml("<%=s%>");
+
+             var currId = "<%=Encode.forJavaScript(s).replaceAll(" ","")%>";
              checked[i] = false;
             var elements = document.getElementsByName(currId);
              for(var elemN=0; elemN < elements.length; elemN++){
@@ -66,21 +39,28 @@
     <%}%>
         for (var val in checked) {
             if (checked[val] != true) {
-                alert('Please set sensitivity value for all data elements');
+                showError('Please set sensitivity value for all data elements');
                 return false;
             }
         }
         return true;
     }
-</script>
 
+    function showError(errorMessage){
+        document.getElementById("alertMessage").innerHTML = errorMessage;
+        var alertBox =document.getElementById("notification");
+        alertBox.show();
+        document.getElementById('close').onclick = function () {
+            alertBox.close();
+        }
+    }
+</script>
+</section>
 <section class="wrapper style2 special" id="two">
     <div class="inner narrow">
-        <header>
-            <h2 class="head-last">
-                How sensitive do you think the data items you chose to collect for the
-                application would be for a user who uses the application?
-            </h2></header>
+        <header><h2>Step I : First determine how sensitive do you think the data items you chose to collect for the
+            application would be for a user who uses the application.</h2>
+          </header>
     </div>
     <button id="show" class="button" >Show Application Scenario</button>
 
@@ -104,6 +84,10 @@
         </p>
         <button id="exit">Close Dialog</button>
     </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
+    </dialog>
     <script>
 
         (function() {
@@ -118,12 +102,10 @@
     </script>
     <div class="container">
         <div class="row ">
-            <p>Sensitivity implies the impact of loss of data to the user. Some data may have a higher impact of loss to the user while the loss of some data may not be
-            very critical for the user. Sensitivity measures this aspect of data.</p>
+            <p>Sensitivity is the impact of loss of data to the user. Some data may have a higher impact of loss to the user while the loss of some data may not be
+            very critical for the user. </p>
             <form id="form" action="set_visibility_page.jsp" onsubmit="return validateForm()" method="post" >
-                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
-                    String myToken = generateCSRFToken.generateCSRFToken();%>
-                <input type="hidden" name="_csrf" value="<%=myToken%>" />
+                <input type="hidden" name="_csrf" value="<%=sessionToken%>" />
                 <% for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
                         String currDataElemName = selectedDatalist[iterator];%>
             <table id="customers">
@@ -149,5 +131,8 @@
             </div>
         </div>
 </section>
+<div id="footer" style="align-content: center">
+    page 06
+</div>
 </body>
 </html>

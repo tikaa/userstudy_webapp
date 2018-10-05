@@ -3,6 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/SurveyStudy_war</output-path>
     <root id="archive" name="SurveyStudy_war.war">
       <element id="artifact" artifact-name="SurveyStudy:war exploded" />
+      <element id="dir-copy" path="$PROJECT_DIR$/web/WEB-INF/lib" />
     </root>
   </artifact>
 </component>

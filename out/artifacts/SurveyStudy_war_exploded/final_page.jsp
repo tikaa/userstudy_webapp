@@ -7,8 +7,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
-
     <%
+        String sessionToken = session.getAttribute("csrf_token").toString();
+        String formSubmittedToken = request.getParameter("_csrf");
+        if(!sessionToken.equals(formSubmittedToken)) {
+            session.invalidate();
+            String redirectURL = "error_page.jsp";
+            response.sendRedirect(redirectURL);
+        }
         StringBuffer evalParams = new StringBuffer();
         if (request.getParameter("age")!= null) {
             evalParams.append("\n Participant's age" + request.getParameter("age"));
@@ -21,14 +27,17 @@
         }
         StringBuffer techUsed = new StringBuffer();
         techUsed.append("\n Techniques Used by the Participant \n"
-                + request.getParameter("anonymity") + "how : " + request.getParameter("anonymity_how")
-                + ", \n" + request.getParameter("pseudonimity")+ "how : " + request.getParameter("pseudonimity_how")
-                + ", \n" + request.getParameter("encryption")+ "how : " + request.getParameter("encryption_how")
-                + ", \n" + request.getParameter("unlinkability")+ "how : " + request.getParameter("unlinkability_how")
-                + ", \n" + request.getParameter("obfuscation")+ "how : " + request.getParameter("obfuscation_how")
-                + ", \n" + request.getParameter("undetectability")+ "how : " + request.getParameter("undetectability_how")
-                + ", \n" + request.getParameter("unobservability")+ "how : " + request.getParameter("unobservability_how"));
-        String emailContent = session.getAttribute("emailBody_partI").toString() + evalParams.toString() + techUsed.toString();
+              + "risk_helped_" + request.getParameter("risk_helped")
+              + "_anonymity_" + request.getParameter("anonymity_how")
+                + ", \n" + "_pseudonimity_" + request.getParameter("pseudonimity_how")
+                + ", \n" + "_encryption_" + request.getParameter("encryption_how")
+                + ", \n" + "_unlinkability_" + request.getParameter("unlinkability_how")
+                + ", \n" + "_obfuscation_" + request.getParameter("obfuscation_how")
+                + ", \n" + "_undetectability_" + request.getParameter("undetectability_how")
+                + ", \n" + "_unobservability_" + request.getParameter("unobservability_how"));
+        java.util.Date date = new java.util.Date();
+        String dateTime = date.toString();
+        String emailContent = dateTime + session.getAttribute("emailBody_partI").toString() + evalParams.toString() + techUsed.toString();
         String participantID = session.getAttribute("currParticipant").toString();
 //        EmailSender emailSender = new EmailSender();
 //        emailSender.sendEmail(emailContent);
@@ -36,6 +45,7 @@
         dataStorer.fileWriter(participantID, emailContent);
         //response.sendRedirect("data_selection_page.jsp");
         // send the email with the participants response
+        session.invalidate();
     %>;
 </head>
 <body>

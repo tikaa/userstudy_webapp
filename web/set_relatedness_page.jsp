@@ -1,4 +1,3 @@
-<%@ page import="main.java.util.GenerateCSRFToken" %>
 <%@ page import="org.owasp.encoder.Encode" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
@@ -8,24 +7,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style/css/main.css" rel="stylesheet">
-
-    <script>
-
-        function escapeHtml(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&#039;");
+    <%
+        String sessionToken = session.getAttribute("csrf_token").toString();
+        String formSubmittedToken = request.getParameter("_csrf");
+        if(!sessionToken.equals(formSubmittedToken)) {
+            session.invalidate();
+            String redirectURL = "error_page.jsp";
+            response.sendRedirect(redirectURL);
         }
-
+    %>
+    <script>
         function validateForm() {
             var checked= [];
             var i = 0;
             <%String[] list = session.getAttribute("selectedData").toString().split(",");
-                for (String s : list) {%>
-            var currId = escapeHtml("<%=s%>");
+               for (String s : list) {%>
+            var currId = "<%=Encode.forJavaScript(s).replaceAll(" ","")%>";
             checked[i] = false;
             var elements = document.getElementsByName(currId);
             for(var elemN=0; elemN < elements.length; elemN++){
@@ -37,11 +34,20 @@
             <%}%>
             for (var val in checked) {
                 if (checked[val] != true) {
-                    alert('Please set relatedness value for all data elements');
+                    showError('Please set relatedness value for all data elements');
                     return false;
                 }
             }
             return true;
+        }
+
+        function showError(errorMessage){
+            document.getElementById("alertMessage").innerHTML = errorMessage;
+            var alertBox =document.getElementById("notification");
+            alertBox.show();
+            document.getElementById('close').onclick = function () {
+                alertBox.close();
+            }
         }
     </script>
     <script language="javascript" type="text/javascript">
@@ -53,7 +59,7 @@
     <div class="inner narrow">
         <header>
             <h2 class="head-last">
-                How related do you do you think the data items are to the purpose of this application?
+                Step III : As the third step of the model determine how related do you think the data items are to the purpose of this application.
             </h2></header>
     </div>
     <button id="show" class="button" >Show Application Scenario</button>
@@ -77,6 +83,10 @@
         </li>
         </p>
         <button id="exit">Close Dialog</button>
+    </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
     </dialog>
     <script>
 
@@ -102,12 +112,10 @@
                 }
             %>
             <p>The data you use may be highly related for the application such that the application cannot function without that data. For example,
-            the credit card number for a payment portal. Less related data are data used to enhance the system functionality or data that is used with the hope of giving more functioanlity
-            in the future.</p>
+            the credit card number for a payment portal is highly related and the app cannot function without it. But the location is irrelevant for a
+            payment portal and user's preferred mode of payment could be stored in a payment portal to provide more funcationality to the user.</p>
             <form id="form" action="privace_risk_view_page.jsp" onsubmit="return validateForm()" method="post">
-                <%GenerateCSRFToken generateCSRFToken = new GenerateCSRFToken();
-                    String myToken = generateCSRFToken.generateCSRFToken();%>
-                <input type="hidden" name="_csrf" value="<%=myToken%>" />
+                <input type="hidden" name="_csrf" value="<%=sessionToken%>" />
             <%
                 for (int iterator = 0; iterator < selectedDatalist.length; iterator++) {
                     String currDataElemName = selectedDatalist[iterator];
@@ -139,5 +147,8 @@
     </div>
     </div>
 </section>
+<div id="footer" style="align-content: center">
+    page 08
+</div>
 </body>
 </html>

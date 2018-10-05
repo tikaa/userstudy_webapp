@@ -3904,10 +3904,241 @@ TABLE STYLES
     color: white;
 }
 
+#customers2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers2 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers2 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers2 tr:hover {background-color: #ddd;}
+
+#customers2 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #009a9c;
+	color: white;
+}
+
+#customers1 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers1 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers1 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers1 tr:hover {background-color: #ddd;}
+
+#customers1 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #009a9c;
+	color: white;
+}
+
+#customerss {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customerss td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customerss tr:nth-child(even){background-color: #f2f2f2;}
+
+#customerss tr:hover {background-color: #ddd;}
+
+#customerss th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #009a9c;
+	color: white;
+}
+
+#customers3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#customers3 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#customers3 tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers3 tr:hover {background-color: #ddd;}
+
+#customers3 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #009a9c;
+	color: white;
+}
+
+#headertable {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable tr:hover {background-color: #ddd;}
+
+#headertable th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+#headertable2 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable2 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable2 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable2 tr:hover {background-color: #ddd;}
+
+#headertable2 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+#headertable3 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable3 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable3 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable3 tr:hover {background-color: #ddd;}
+
+#headertable3 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+#headertable4 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable4 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable4 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable4 tr:hover {background-color: #ddd;}
+
+#headertable4 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+#headertable6 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable6 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable6 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable6 tr:hover {background-color: #ddd;}
+
+#headertable6 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+#headertable5 {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#headertable5 td, #customers th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#headertable5 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable5 tr:hover {background-color: #ddd;}
+
+#headertable5 th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #000000;
+	color: white;
+}
+
+
 dialog {
 	width: 500px;
-	background:#e8e8e8;
-	border: 1px solid #dadada;
+	background:#009a9c;
+	border: 3px solid #dadada;
 	font-family:sans-serif;
-	padding: 5px 10px 20px 20px;
+	padding: 20px 20px 20px 20px;
 }
