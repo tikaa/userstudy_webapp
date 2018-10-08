@@ -20,51 +20,58 @@
     %>
     <%
         StringBuffer evalParams = new StringBuffer();
-        if (request.getParameter("better")!= null) {
-            evalParams.append("\n This model makes my work easier when I implement privacy in software designs. : " + request.getParameter("better"));
+        if (request.getParameter("complexity1")!= null) {
+            evalParams.append("\n complexity1 : " + request.getParameter("complexity1"));
         }
-        if(request.getParameter("interesting")!= null) {
-            evalParams.append("\n This model helps me to understand the data I use in system designs better. : "+ request.getParameter("interesting"));
+        if(request.getParameter("complexity2")!= null) {
+            evalParams.append("\n complexity2 : "+ request.getParameter("complexity2"));
         }
-        if(request.getParameter("quickly")!= null) {
-            evalParams.append("\n This model is important for me to implement privacy in a software systems design. : " + request.getParameter("quickly"));
+        if(request.getParameter("complexity3")!= null) {
+            evalParams.append("\n complexity3 : " + request.getParameter("complexity3"));
         }
-        if(request.getParameter("informed")!= null) {
-            evalParams.append("\n  This model helps me to make my decisions on data sharing, collection and storage in the system design better. : " + request.getParameter("informed"));
+        if(request.getParameter("complexity4")!= null) {
+            evalParams.append("\n complexity4 : " + request.getParameter("complexity4"));
         }
-        if(request.getParameter("likely")!= null) {
-            evalParams.append("\n This model helps me to make my decisions on data sharing, collection and storage in the system design quickly. : " + request.getParameter("likely"));
+        if(request.getParameter("usefulness1")!= null) {
+            evalParams.append("\n usefulness1 : " + request.getParameter("usefulness1"));
         }
-        if(request.getParameter("decisions")!= null) {
-            evalParams.append("\n After following the model I am better informed about making design decisions to protect user privacy in a system design. : " + request.getParameter("decisions"));
+        if(request.getParameter("usefulness2")!= null) {
+            evalParams.append("\n usefulness2 : " + request.getParameter("usefulness2"));
         }
-        if(request.getParameter("ease")!= null) {
-            evalParams.append("\n This model provides the required understanding of data for me to minimize data and provide end user privacy in a software system design. : " + request.getParameter("ease"));
+        if(request.getParameter("usefulness3")!= null) {
+            evalParams.append("\n usefulness3 : " + request.getParameter("usefulness3"));
         }
-        if(request.getParameter("enjoyable")!= null) {
-            evalParams.append("\n I understood the model and its parameters easily. : " + request.getParameter("enjoyable"));
+        if(request.getParameter("socialpressure1")!= null) {
+            evalParams.append("\n socialpressure1 : " + request.getParameter("socialpressure1"));
         }
-        if(request.getParameter("clear")!= null) {
-            evalParams.append("\n Following this process was easy. : " + request.getParameter("clear"));
+        if(request.getParameter("socialpressure2")!= null) {
+            evalParams.append("\n socialpressure2 : " + request.getParameter("socialpressure2"));
         }
-        if(request.getParameter("effort") != null) {
-            evalParams.append("\n It is important that I use this model to make my applications use less data for better user privacy. : " + request.getParameter("effort"));
+        if(request.getParameter("compatibility1") != null) {
+            evalParams.append("\n compatibility1 : " + request.getParameter("compatibility1"));
         }
-        if(request.getParameter("skills") != null) {
-            evalParams.append("\n This model works well with the way I already work. : " + request.getParameter("skills"));
+        if(request.getParameter("compatibility2") != null) {
+            evalParams.append("\n compatibility2 : " + request.getParameter("compatibility2"));
         }
-        if(request.getParameter("use") != null) {
-            evalParams.append("\n This model positively affects my current approach towards system designing. : " + request.getParameter("use"));
+        if(request.getParameter("compatibility3") != null) {
+            evalParams.append("\n compatibility3 : " + request.getParameter("compatibility3"));
         }
-        if(request.getParameter("future") != null) {
-            evalParams.append("\n In will use this approach in my future system design tasks. : " + request.getParameter("future"));
+        if(request.getParameter("orgsupport1") != null) {
+            evalParams.append("\n orgsupport1 : " + request.getParameter("orgsupport1"));
         }
-        if(request.getParameter("support") != null) {
-            evalParams.append("\n Given the support, I would use this approach. : " + request.getParameter("support"));
+        if(request.getParameter("orgsupport2") != null) {
+            evalParams.append("\n orgsupport2 : " + request.getParameter("orgsupport2"));
         }
-        if(request.getParameter("intention") != null) {
-            evalParams.append("\n I intend to use this method in my work : " + request.getParameter("support"));
+        if(request.getParameter("demonstrability1") != null) {
+            evalParams.append("\n demonstrability1 : " + request.getParameter("demonstrability1"));
+        } if(request.getParameter("demonstrability2") != null) {
+            evalParams.append("\n demonstrability2 : " + request.getParameter("demonstrability2"));
+        } if(request.getParameter("intention1") != null) {
+            evalParams.append("\n intention1 : " + request.getParameter("intention1"));
+        }if(request.getParameter("intention2") != null) {
+            evalParams.append("\n intention2 : " + request.getParameter("intention2"));
         }
+
         StringBuffer sessionParams = new StringBuffer();
         sessionParams.append("Participant ID : " + session.getAttribute("currParticipant") + "\n \n");
         sessionParams.append("---------------------\n" + session.getAttribute("selectedData") + "\n \n");

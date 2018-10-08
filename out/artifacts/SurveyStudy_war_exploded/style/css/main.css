@@ -3865,7 +3865,7 @@ TABLE STYLES
 }
 
 #customers td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -3888,7 +3888,7 @@ TABLE STYLES
 }
 
 #mytable td, #mytable th {
-    border: 1px solid #ddd;
+    border: 1px solid transparent;
     padding: 8px;
 }
 
@@ -3903,6 +3903,28 @@ TABLE STYLES
     background-color: #009a9c;
     color: white;
 }
+#mytablenew {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#mytablenew td, #mytable th {
+    border: 1px solid transparent;
+    padding: 8px;
+}
+
+#mytablenew tr:nth-child(even){background-color: #f2f2f2;}
+
+#mytablenew tr:hover {background-color: #ddd;}
+
+#mytablenew th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #009a9c;
+    color: white;
+}
 
 #customers2 {
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -3911,7 +3933,7 @@ TABLE STYLES
 }
 
 #customers2 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -3934,7 +3956,7 @@ TABLE STYLES
 }
 
 #customers1 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -3957,7 +3979,7 @@ TABLE STYLES
 }
 
 #customerss td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -3980,7 +4002,7 @@ TABLE STYLES
 }
 
 #customers3 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4003,7 +4025,7 @@ TABLE STYLES
 }
 
 #headertable td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4026,7 +4048,7 @@ TABLE STYLES
 }
 
 #headertable2 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4049,7 +4071,7 @@ TABLE STYLES
 }
 
 #headertable3 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4072,7 +4094,7 @@ TABLE STYLES
 }
 
 #headertable4 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4095,7 +4117,7 @@ TABLE STYLES
 }
 
 #headertable6 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4118,7 +4140,7 @@ TABLE STYLES
 }
 
 #headertable5 td, #customers th {
-	border: 1px solid #ddd;
+	border: 1px solid transparent;
 	padding: 8px;
 }
 
@@ -4135,10 +4157,35 @@ TABLE STYLES
 }
 
 
+
+#headertable7 {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#headertable7 td, #customers th {
+    border: 1px solid transparent;
+    padding: 8px;
+}
+
+#headertable7 tr:nth-child(even){background-color: #f2f2f2;}
+
+#headertable7 tr:hover {background-color: #ddd;}
+
+#headertable7 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #000000;
+    color: white;
+}
+
+
 dialog {
 	width: 500px;
 	background:#009a9c;
-	border: 3px solid #dadada;
+	border: 3px solid transparent;
 	font-family:sans-serif;
 	padding: 20px 20px 20px 20px;
 }

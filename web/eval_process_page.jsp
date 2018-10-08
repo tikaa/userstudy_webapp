@@ -21,7 +21,7 @@
     <%
         String sessionToken = session.getAttribute("csrf_token").toString();
         String formSubmittedToken = request.getParameter("_csrf");
-        if(!sessionToken.equals(formSubmittedToken)) {
+        if (!sessionToken.equals(formSubmittedToken)) {
             session.invalidate();
             String redirectURL = "error_page.jsp";
             response.sendRedirect(redirectURL);
@@ -106,84 +106,126 @@
             var checked = [];
             var i = 0;
             checked[i] = false;
-            var elements = document.getElementsByName("quickly");
+            var elements = document.getElementsByName("complexity1");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("better");
+            var elements = document.getElementsByName("complexity2");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("informed");
+            var elements = document.getElementsByName("complexity3");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("likely");
+            var elements = document.getElementsByName("complexity4");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("decisions");
+            var elements = document.getElementsByName("usefulness1");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("ease");
+            var elements = document.getElementsByName("usefulness2");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("interesting");
+            var elements = document.getElementsByName("usefulness3");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("enjoyable");
+            var elements = document.getElementsByName("socialpressure1");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("clear");
+            var elements = document.getElementsByName("socialpressure2");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("effort");
+            var elements = document.getElementsByName("compatibility1");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("skills");
+            var elements = document.getElementsByName("compatibility2");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
                 }
             }
             i++;
-            var elements = document.getElementsByName("use");
+            var elements = document.getElementsByName("compatibility3");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("orgsupport1");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("orgsupport2");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("demonstrability1");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("demonstrability2");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("intention1");
+            for (var elemN = 0; elemN < elements.length; elemN++) {
+                if (elements[elemN].checked) {
+                    checked[i] = true;
+                }
+            }
+            i++;
+            var elements = document.getElementsByName("intention2");
             for (var elemN = 0; elemN < elements.length; elemN++) {
                 if (elements[elemN].checked) {
                     checked[i] = true;
@@ -198,9 +240,9 @@
             return true;
         }
 
-        function showError(errorMessage){
+        function showError(errorMessage) {
             document.getElementById("alertMessage").innerHTML = errorMessage;
-            var alertBox =document.getElementById("notification");
+            var alertBox = document.getElementById("notification");
             alertBox.show();
             document.getElementById('close').onclick = function () {
                 alertBox.close();
@@ -216,435 +258,562 @@
                 Share you thoughts on the privacy risk values you were shown in this process you followed.
             </h2></header>
     </div>
-        <dialog id="notification">
-            <div id="alertMessage">Please fill all fields and continue</div>
-            <button id="close">Close Dialog</button>
-        </dialog>
+    <dialog id="notification">
+        <div id="alertMessage">Please fill all fields and continue</div>
+        <button id="close">Close Dialog</button>
+    </dialog>
     <div class="container">
         <div class="row ">
 
-        <form id="form" action="thankyou_page.jsp" onsubmit="return validateForm()" method="post">
-            <input type="hidden" name="_csrf" value="<%=sessionToken%>" />
-            <table id="headertable">
-                <tr><th>Complexity in using the Privacy Engineering Model</th></tr>
-            </table>
-            <table id="customers">
-                <tr>
-                    <th colspan="5">This privacy engineering model makes my work easier when I implement privacy in software systems</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="better"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="better"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="better"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="better"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="better"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">Following this privacy engineering model was difficult for implementing privacy in software systems.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="interesting"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="interesting"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="interesting"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="interesting"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="interesting"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5"> I can easily understand how the privacy engineering model works when I implement privacy in developing software systems.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="quickly"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="quickly"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="quickly"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="quickly"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="quickly"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-            </table>
-            <table id="headertable2">
-                <tr><th>Usefulness of using the Privacy Engineering Model</th></tr>
-            </table>
-            <table id="customerss">
-                <tr>
-                    <th colspan="5">This privacy engineering model helps me to make my decisions on data sharing, collection and storage when I develop software systems.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="informed"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="informed"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="informed"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="informed"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="informed"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">The privacy engineering model is useful for me to make decisions to protect user data in a software system.
+            <form id="form" action="thankyou_page.jsp" onsubmit="return validateForm()" method="post">
+                <input type="hidden" name="_csrf" value="<%=sessionToken%>"/>
+                <table id="headertable">
+                    <tr>
+                        <th>Complexity in using the Privacy Engineering Model</th>
+                    </tr>
+                </table>
+                <table id="customers">
+                    <tr>
+                        <th colspan="5">1. This privacy engineering model makes my work easier when I implement privacy
+                            in software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="complexity1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. I already have the required knowledge to follow this model to help me
+                            implement data protection in software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="complexity2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">3. Following this privacy engineering model was difficult for implementing
+                            privacy in software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="complexity3"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity3"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity3"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity3"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity3"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">4. I can easily understand how the privacy engineering model works when I
+                            implement privacy in developing software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="complexity4"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity4"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity4"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity4"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="complexity4"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable2">
+                    <tr>
+                        <th>Usefulness of using the Privacy Engineering Model</th>
+                    </tr>
+                </table>
+                <table id="customerss">
+                    <tr>
+                        <th colspan="5">1. This privacy engineering model helps me to make my decisions on data sharing,
+                            collection and storage when I develop software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usefulness1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. The privacy engineering model is useful for me to make decisions to protect
+                            user data in a software system.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usefulness2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <th colspan="5">3. This privacy engineering model does not help me in anyway to implement data
+                        protection in a software system.
                     </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="likely"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="likely"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="likely"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="likely"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="likely"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                    <th colspan="5">This privacy engineering model does not help me in anyway to implement data protection in a software system.
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="decisions"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="decisions"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="decisions"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="decisions"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="decisions"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                </tr>
-            </table>
-            <table id="headertable3">
-                <tr><th>Social Pressure for using the Privacy Engineering Model</th></tr>
-            </table>
-            <table id="customers1">
-                <tr>
-                    <th colspan="5">My colleagues at work would think I should use this privacy engineering model to implement privacy in software systems.
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="ease"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="ease"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="ease"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="ease"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="ease"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">I do not think my colleagues at work would think I/we should use this privacy engineering model when I/we implement data protection in a software system.
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="enjoyable"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="enjoyable"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="enjoyable"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="enjoyable"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="enjoyable"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-            </table>
-            <table id="headertable4">
-                <tr><th>Compatibility of the Privacy Engineering Model with how I work</th></tr>
-            </table>
-            <table id="customers2">
-                <tr>
-                    <th colspan="5">When I am (or my team) asked to develop software systems with better user privacy this privacy engineering model works well with the way I already work in the organization.
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="clear"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="clear"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="clear"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="clear"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="clear"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">When I am (or my team) asked to develop software systems with better user privacy this privacy engineering model positively affects the way I/we already work in the organization.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="effort"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="effort"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="effort"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="effort"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="effort"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">I do not think this privacy engineering model would positively affect to me or my team in our usual software development activities at the organization.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="skills"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="skills"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="skills"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="skills"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="skills"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-            </table>
-            <table id="headertable5">
-                <tr><th>My Organization's support for using the Privacy Engineering Model</th></tr>
-            </table>
-            <table id="mytable">
-                <tr>
-                    <th colspan="5">I would highly likely use this privacy engineering model when implementing data protection in software systems, if given support by my organization.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="use"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="use"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="use"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="use"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="use"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5"> I'm unlikely to attend the training, if my organization wants to train me to use this privacy engineering model for developing
-                        software systems with better user privacy.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="future"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="future"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="future"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="future"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="future"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-            </table>
-            <table id="headertable6">
-                <tr><th>My intention to use this Privacy Engineering Model</th></tr>
-            </table>
-            <table id="customers3">
-                <tr>
-                    <th colspan="5">I am highly likely to use this privacy engineering model when I'm asked to implement data protection in a software system.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="support"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="support"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="support"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="support"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="support"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="5">When I'm asked to implement data protection in a system, I do not think I would use this privacy engineering model at all.</th>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="radio" name="intention"
-                               value="Strongly-Agree"/> Strongly-Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="intention"
-                               value="Somewhat Agree"/> Somewhat Agree
-                    </td>
-                    <td>
-                        <input type="radio" name="intention"
-                               value="Neutral"/> Neutral
-                    </td>
-                    <td>
-                        <input type="radio" name="intention"
-                               value="Somewhat Disagree"/> Somewhat Disagree
-                    </td>
-                    <td>
-                        <input type="radio" name="intention"
-                               value="Strongly-Disagree"/> Strongly-Disagree
-                    </td>
-                </tr>
-            </table>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="usefulness3"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness3"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness3"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness3"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="usefulness3"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable3">
+                    <tr>
+                        <th>Social Pressure for using the Privacy Engineering Model</th>
+                    </tr>
+                </table>
+                <table id="customers1">
+                    <tr>
+                        <th colspan="5">1. My colleagues at work would think I should use this privacy engineering model
+                            to implement privacy in software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="socialpressure1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. I do not think my colleagues at work would think I/we should use this privacy
+                            engineering model when I/we implement data protection in a software system.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="socialpressure2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="socialpressure2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable4">
+                    <tr>
+                        <th>Compatibility of the Privacy Engineering Model with how I work</th>
+                    </tr>
+                </table>
+                <table id="customers2">
+                    <tr>
+                        <th colspan="5">1. When I am (or my team) asked to develop software systems with better user
+                            privacy this privacy engineering model works well with the way I already work in the
+                            organization.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="compatibility1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. When I am (or my team) asked to develop software systems with better user
+                            privacy this privacy engineering model positively affects the way I/we already work in the
+                            organization.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="compatibility2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">3. I do not think this privacy engineering model would positively affect to me
+                            or my team in our usual software development activities at the organization.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="compatibility3"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility3"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility3"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility3"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="compatibility3"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable5">
+                    <tr>
+                        <th>My Organization's support for using the Privacy Engineering Model</th>
+                    </tr>
+                </table>
+                <table id="mytable">
+                    <tr>
+                        <th colspan="5">1. I would highly likely use this privacy engineering model when implementing
+                            data protection in software systems, if given support by my organization.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. I'm unlikely to attend the training, if my organization wants to train me to
+                            use this privacy engineering model for developing
+                            software systems with better user privacy.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="orgsupport1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable7">
+                    <tr>
+                        <th>Result Demonstrability of the Model</th>
+                    </tr>
+                </table>
+                <table id="mytablenew">
+                    <tr>
+                        <th colspan="5">1. I can see how following this model would enhance data protection in the
+                            software systems I develop.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="demonstrability1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. I have difficulty in explaining why following this methdology may or may not
+                            help implementing data protection in software systems.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="demonstrability2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="demonstrability2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
+                <table id="headertable6">
+                    <tr>
+                        <th>My intention to use this Privacy Engineering Model</th>
+                    </tr>
+                </table>
+                <table id="customers3">
+                    <tr>
+                        <th colspan="5">1. I am highly likely to use this privacy engineering model when I'm asked to
+                            implement data protection in a software system.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="intention1"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention1"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention1"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="intention1"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention1"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="5">2. When I'm asked to implement data protection in a system, I do not think I
+                            would use this privacy engineering model at all.
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="intention2"
+                                   value="Strongly-Agree"/> Strongly-Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention2"
+                                   value="Somewhat Agree"/> Somewhat Agree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention2"
+                                   value="Neutral"/> Neutral
+                        </td>
+                        <td>
+                            <input type="radio" name="intention2"
+                                   value="Somewhat Disagree"/> Somewhat Disagree
+                        </td>
+                        <td>
+                            <input type="radio" name="intention2"
+                                   value="Strongly-Disagree"/> Strongly-Disagree
+                        </td>
+                    </tr>
+                </table>
 
-            <div class="buttonHolder">
-                <button class="button" style="vertical-align:middle" type="submit" form="form"
-                        value="Submit">Next >>
-                </button>
-            </div>
+                <div class="buttonHolder">
+                    <button class="button" style="vertical-align:middle" type="submit" form="form"
+                            value="Submit">Next >>
+                    </button>
+                </div>
 
-        </form>
-            </div>
+            </form>
         </div>
+    </div>
     </div>
 
 </section>
